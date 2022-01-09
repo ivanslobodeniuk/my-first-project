@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Page !</title>
+</head>
+<body>
+    <h1 style="color: darkgreen">Greetings: This is my first custom page!</h1>
+    <h3>Custom Page</h3>
+    <script>
+
+        console.log('Page: Custom Page!');
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+        //console.log(menu)
+
+        function multiplyNumeric(obj) {
+            for (let property in obj) {
+                if (typeof obj[property] === 'number') {
+                    obj[property] *= 2;
+                }
+            }
+        }
+        multiplyNumeric(menu);
+        let user = {
+            name: "Ivan",
+            surname: "Slobodeniuk",
+            date_birthday: "6.6.89"
+        }
+
+        // console.log(user.surname.slice(0, 3));
+
+        console.log(menu.width);
+        console.log(menu.height);
+        console.log(menu.title);
+        console.log(user);
+    </script>
+</body>
+</html>
+
