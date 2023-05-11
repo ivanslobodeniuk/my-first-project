@@ -9,4 +9,9 @@ h1 {
   font-size: 20px;
   color: green;
 }
+div {
+  background: azure;
+  border: aqua solid 1px;
+  width: max-content;
+}
 /*# sourceMappingURL=custom-styles.css.map */

@@ -1,0 +1,22 @@
+let string='загадайте число від нуля до девяти, компютер загадає своє'
+prompt(string)
+alert(Math.floor(Math.random()*10))
+
+let main = document.querySelector('.buttons')
+let button = document.querySelector('.but');
+button.onclick = f;
+function f() {
+button.style.backgroundColor = 'green'
+    main.style.backgroundColor = randomColor()
+}
+
+function randomColor () {
+let hex = Math.random() * 0xFFFFFF;
+return "#" +("000000" + hex.toString(16)).substr(-6);
+}
+
+function f1 () {
+    let checkbox = document.getElementById('checkbox1')
+    if (checkbox.checked) alert('true')
+    else alert('false')
+}

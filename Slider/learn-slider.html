@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="learn-slider.css">
+</head>
+<body>
+    <h1>Greetings: This is my learn - slider!</h1>
+    <div class="container">
+        <div class="slider">
+            <div class="img_slider">
+                <img src="images/bknnh3x-1024x768-backgrounds.jpg" alt="nature1">
+                <img src="images/iw7G47f-1024x768-backgrounds.jpg" alt="nature2">
+                <img src="images/oksvZpw-1024x768-backgrounds.jpg" alt="nature3">
+                <img src="images/qSmBitH-1024x768-backgrounds.jpg" alt="nature4">
+                <img src="images/vkplyzg-1024x768-backgrounds.jpg" alt="nature5">
+            </div>
+        </div>
+        <button class="previous"><img src="images/previous.png" alt="NaN"></button>
+        <button class="next"><img src="images/next.png" alt="NaN"></button>
+    </div>
+    <script>
+        let startPoint = 0; // в майбутньому це крайня ліва вертикальна лінія блоку 'img_slider' (але фактично це просто нуль)
+        const img_slider = document.querySelector('.img_slider'); // беремо блок в якому знаходяться фото
+        document.querySelector('.next').addEventListener('click', function () { // беремо кнопку 'next' і навішуємо на її функцію яка буде спрацьовувати при нажатті на неї клавішею миші
+            startPoint += 1024; // зміщуємо блок 'img_slider' на 1024 умовні одиниці (тут вказно зміщення на 1024 умовні одиниці, але не сказано куди)
+            if (startPoint > 4096) { // якщо, блок зміститься більше ніж на 4096 умовні одиниці то
+                startPoint = 0; // повертаємось на 0px
+            }
+            img_slider.style.left = -startPoint + 'px' // зміщуємо весь блок із фото в ліво на 1024px (саме тут умовні одиниці стають одиницями вимірювання - пікселями (px), оскільки за допомогою конкантинації ми їх обєднуємо з перемінною 'startPoint'), надаючи йому (блокові 'img_slider') стиль 'left': -1024px;
+        })
+
+        document.querySelector('.previous').addEventListener('click', function () {
+            startPoint -= 1024;
+            if (startPoint < 0) {
+                startPoint = 4096;
+            }
+            img_slider.style.left = -startPoint + 'px'
+        })
+    </script>
+</body>
+</html>
+

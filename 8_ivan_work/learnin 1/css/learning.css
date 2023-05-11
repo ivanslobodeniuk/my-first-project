@@ -1,0 +1,12 @@
+* {
+   margin: 0 auto;
+}
+div {
+    text-align: center;
+}
+.out {
+    background: cornsilk;
+    width:max-content;
+    text-align: center;
+    font-size: xxx-large;
+}

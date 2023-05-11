@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn cycle</title>
+    <link rel="stylesheet" href="css/learn-cycles.css">
+</head>
+<body>
+<h1 style="color: blue">Greetings: This is my learn cycle javascript</h1>
+<h3>So let's start: create several arrays</h3>
+<div>
+    <code>
+        let arrNum = [35, 41, -16, 0, 33, 55, 5.5, 8]<br>
+        let arrMix = ['robot', 46, null, true, undefined, function test();]<br>
+        let objUser = {<br>
+            name: 'ivan',<br>
+            age: 30,<br>
+            family: 'yes',<br>
+            work: 'crane_driver',<br>
+            personal_lives: undefined<br>
+        }
+    </code>
+</div>
+<h3>Presents several cycles</h3>
+<div>
+    <code>
+        <p>Cycle For</p>
+        for (i = 0; i < arrNum.length; i++) {<br>
+            console.log(arrNum[i])<br>
+        }
+        <p> Cycle For in</p>
+        for (let key in objUser) {<br>
+            console.log(key) or console.log(objUser[key])<br>
+        }
+        <p> Cycle For of</p>
+        for (let elem of arrMix) {<br>
+            console.log(elem)<br>
+        }
+        <p> Cycle forEach</p>
+        arrMix.forEach(function(elem, index, arr) {<br>
+            console.log(elem, index, arr)<br>
+        )}
+    </code>
+</div>
+<script>
+    let empty = {}
+
+    let arrNum = [35, 41, -16, 0, 33, 55, 5.5, 8]
+
+    let arrMix = ['robot', 46, null, true, undefined, function test() {}]
+
+    let objUser = {
+        name: 'ivan',
+        age: 30,
+        family: 'yes',
+        work: 'crane_driver',
+        personal_lives: undefined
+    }
+
+    console.log(objUser.hasOwnProperty('name')) // пошук прямого ключа обекту
+    console.log(objUser.hasOwnProperty('surname'))
+
+    // let user = { name: 'Ivan' }
+    // let admin = user;
+    // admin.name = 'Roman';
+    // console.log(user.name + ' -user')
+    // console.log(admin.name + ' -admin')
+    //
+    // let user_ = {name: 'Ivan'}
+    // let admin_ = user_;
+    // admin_ = {name: 'Roman'}
+    // console.log(user_.name + ' -user')
+    // console.log(admin_.name + ' -admin')
+    //
+    // console.log(user===admin)
+    // console.log(user_===admin_)
+
+    // function isEmpty(obj) {
+    //     for (let key in obj) {
+    //         return false;
+    //     }
+    //
+    //     return true;
+    // }
+    //
+    // console.log(isEmpty(objUser) + ' -empty')
+    // console.log(isEmpty(empty) + ' -empty')
+
+    // function testOnUndefined (obj) {
+    //     for (let key in obj) {
+    //         if (typeof obj[key] === 'undefined') {
+    //             console.log(obj[key] + '- undefined');
+    //         } else {
+    //             console.log(obj[key] + '- There is something that is');
+    //         }
+    //     }
+    // }
+    //
+    // testOnUndefined(objUser);
+
+    // console.log(arrNum);
+    // console.log(objUser);
+
+    // let srtArr = (a, b) => {
+    //     return a - b;
+    // }
+
+    // function srtArr(a, b) {
+    //     return a - b;
+    // }
+    //
+    // console.table(arrNum.sort(srtArr));
+    // console.table(arrNum.reverse(srtArr));
+
+    // for (i = 0; i < arrNum.length; i++) {
+    //     console.log(arrNum[i]); // elements arrNum
+    //     console.log(i) // index arrNum
+    // }
+
+    // for (let key in objUser) {
+    //     //console.log(key); // key
+    //      console.log(objUser[key]) // property
+    // }
+
+    // for (let elem of arrMix) {
+    //     console.log(elem + ' - ' + typeof elem); // elements arrMix
+    // }
+
+    // arrMix.forEach(function (elem, index, array) {
+    //     console.table(arrMix);
+    // })
+</script>
+</body>
+</html>
+

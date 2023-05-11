@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/learning.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#">Меню</a>
+        <a href="#">Навігаційний елемент №1</a>
+        <a href="#">Навігаційний елемент №2</a>
+        <a href="#">Навігаційний елемент №3</a>
+        <button onclick="return showOrHideForm();" id="form_register">Show form register</button>
+    </nav>
+</header>
+<div class="main">
+    <div class="content">
+        <h4>Заповніть форму реєстрації і виграйте 100 гривень</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur, debitis doloribus, eaque fugit
+            illum laboriosam molestias natus nulla quasi quidem quos rem sunt suscipit voluptate. Adipisci architecto
+            aspernatur, assumenda aut commodi consequuntur error ex libero mollitia natus nesciunt obcaecati officiis
+            porro ratione reiciendis repudiandae sed sequi vero, voluptate voluptatum.Amet aspernatur, debitis
+            doloribus, eaque fugit illum laboriosam molestias natus nulla quasi quidem quos rem sunt suscipit
+            voluptate.Amet aspernatur, debitis doloribus, eaque fugit illum laboriosam quidem quos suscipit
+            voluptate.</p>
+    </div>
+    <div class="content1">
+        <h4>Цікаво знати</h4>
+        <img src="img/map-flow.jpg" alt="img not found">
+        <p>Океанічна циркуляція прямо залежить від обрисів узбережжя. Зміни контурів материків, наявність або
+            відсутність проток між водоймищами спричинюють істотні зміни природи різних регіонів[2]. Наприклад, до
+            початку еоцену (55 млн років тому) Антарктида поєднувалась з Австралією й могутня течія Західних вітрів не
+            існувала. Тому Антарктида не була відрізана від решти частини світу морськими течіями і перенесенням
+            повітряних мас. Перенесення тепла мав переважно міжширотний характер, перешкоджаючи сильному переохолодженню
+            й утворенню покривного льодовика. Відділення від Австралії, внаслідок тектонічних рухів літосферних плит,
+            призвело до саморозвиткового зниження температури й появи постійного снігового покриву. Внаслідок зледеніння
+            води Антарктичної циркумполярної течії біля берегів континенту охолоджуються, стають важчими, занурюються і
+            розтікаються по поверхні усього океанічного дна планети.</p>
+    </div>
+    <div class="form" id="register-form" style="display: none">
+        <h4>Форма реєстрації</h4>
+        <form method="GET" action="#" enctype="multipart/form-data">
+            <div class="fieldset">
+                <label for="user-name">
+                    <span>Логін</span>
+                </label>
+                <input id="user-name" type="text" name="user_name" placeholder="Введіть логін">
+            </div>
+            <div class="fieldset">
+                <label for="user-pass">
+                    <span>Пароль</span>
+                </label>
+                <input id="user-pass" type="password" name="user_pass" placeholder="Введіть пароль">
+            </div>
+            <div class="fieldset genders">
+                <label>
+                    <span>Виберіть стать:</span>
+                </label>
+                <div>
+                    <input id="gender-male" type="radio" value="male" name="gender">
+                    <label for="gender-male">
+                        <span>Чоловіча</span>
+                    </label>
+                </div>
+                <div>
+                    <input id="gender-female" type="radio" value="female" name="gender">
+                    <label for="gender-female">
+                        <span>Жіноча</span>
+                    </label>
+                </div>
+            </div>
+            <div class="fieldset">
+                <label for="country">
+                    <span>Країна:</span>
+                </label>
+                <select id="country" name="country">
+                    <option value="0">Виберіть країну</option>
+                    <option value="ua">Україна</option>
+                    <option value="us">USA</option>
+                </select>
+            </div>
+            <div class="fieldset">
+                <label for="region">
+                    <span>Область:</span>
+                </label>
+                <select id="region" name="region">
+                    <option value="0">Виберіть область</option>
+                    <option value="1">Автономна Республіка Крим</option>
+                    <option value="2">Вінницька</option>
+                    <option value="3">Волинська</option>
+                    <option value="4">Дніпровська</option>
+                    <option value="5">Донецька</option>
+                    <option value="6">Житомирська</option>
+                    <option value="7">Закарпатська</option>
+                    <option value="8">Запорізька</option>
+                    <option value="9">Івано-Франківська</option>
+                    <option value="10">Київська</option>
+                    <option value="11">Кіровоградська</option>
+                    <option value="12">Луганська</option>
+                    <option value="13">Львівська</option>
+                    <option value="14">Миколаївська</option>
+                    <option value="15">Одеська</option>
+                    <option value="16">Полтавська</option>
+                    <option value="17">Рівненська</option>
+                    <option value="18">Сумська</option>
+                    <option value="19">Тернопільська</option>
+                    <option value="20">Харківська</option>
+                    <option value="21">Херсонська</option>
+                    <option value="22">Хмельницька</option>
+                    <option value="23">Черкаська</option>
+                    <option value="24">Чернівецька</option>
+                    <option value="25">Чернігівська</option>
+                </select>
+            </div>
+            <div class="fieldset city">
+                <label for="city">
+                    <span>Місто:</span>
+                </label>
+                <select id="city" name="city">
+                    <option value="choose_city">Виберіть місто</option>
+                    <option value="netishyn">Нетішин</option>
+                    <option value="slavuta">Славута</option>
+                    <option value="shepetivka">Шепетівка</option>
+                    <option value="yablunivka">Яблунівка</option>
+                    <option value="ostrih">Остріг</option>
+                </select>
+            </div>
+            <div class="actions">
+                <button class="action secondary" type="reset">Скинути</button>
+                <button id="but" class="action primary" type="submit">Відправити</button>
+            </div>
+        </form>
+    </div>
+</div>
+<footer>
+    <h4>Про нас</h4>
+    <p>Адміністрація не несе відповідальності - за дані які ви надаєте цьому сайтові.</p>
+</footer>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/learning.js"></script>
+</body>
+</html>
