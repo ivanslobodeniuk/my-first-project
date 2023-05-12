@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculator"> <!-- Опис мого веб-сайту -->
+    <meta name="keywords" content="calculate"> <!-- ключові слова для пошуку (веб-сайт, HTML, CSS) -->
+    <meta name="author" content="Roman"> <!-- Ваше ім'я -->
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <main>
+        <p>Add two numbers</p>
+    </main>
+    <div class="container">
+        <input id="first-number" type="text" placeholder="Enter first number"/>
+    </div>
+    <div class="plus">
+        <button id="plus-button" class="operation" style="border: 2px solid green;">+</button>
+    </div>
+    <div class="minus">
+        <button id="minus-button" class="operation">&#33;-&#33;</button>
+    </div>
+    <div class="container">
+        <input id="second-number" type="text" placeholder="Enter second number"/>
+    </div>
+    <div class="container">
+        <button id="get-result">Calculate</button>
+        <button id="clear">Clear</button>
+    </div>
+    <div class="container">
+        <input id="result" style="display: none;"/>
+    </div>
+    <footer>
+        <p>&copy; 2023 - Calculator</p>
+    </footer>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

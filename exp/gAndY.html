@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>20 div з зменшенням ширини на 50%</title>
+    </head>
+  <body>
+    <div id="parent"></div>
+    <script>
+      // Отримуємо батьківський елемент, в який будемо додавати div
+const parentElement = document.getElementById("parent");
+
+// Встановлюємо початкові значення ширини та висоти першого div
+let width = 800;
+let height = 800;
+
+// Запускаємо цикл для створення 20 div
+for (let i = 0; i < 20; i++) {
+  // Створюємо новий елемент div
+  const div = document.createElement("div");
+  
+  // Встановлюємо стилі для div
+  div.style.height = `${height}px`;
+  div.style.width = `${width}px`;
+  div.style.backgroundColor = i % 2 === 0 ? "green" : "yellow";
+  div.style.float = "left"; // розташовуємо div зправа на ліво
+
+  // Додаємо div до батьківського елемента
+  parentElement.appendChild(div);
+
+  // Зменшуємо ширину і висоту на 50% для наступного div
+  width *= 0.5;
+  // height *= 0.5;
+}
+    </script>
+  </body>
+</html>

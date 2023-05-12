@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .wrapper {
+            height: 500px; /*висота контейнера*/
+            width: auto; /*ширина контейнера, auto - залежно від контенту*/
+            /*100% - рівна ширині його батьківського елемента*/
+            /*min-content - встановлює ширину елемента на мінімально можливу для відображення вмісту, без урахування padding, border та margin*/
+            /*max-content - встановлює максимальну можливу ширину або висоту елемента, залежно від того, який параметр використовується*/
+            margin: 0; /*зовнішній відступ елемента від інших елементів на сторінці, не від тіла документа*/
+            padding: 20px; /*відстань між вмістом контейнера та його рамкою*/
+            font-family: monospace; /*застосовуємо шрифт monospace*/
+            color: #fff; /*колір шрифту - #fff(білий)*/
+            border: 1px solid #000; /*рамка навколо контейнера*/
+            display: flex; /*використовуємо "флекси" для вмісту контейнера*/
+            flex-wrap: wrap; /*блоки стають по вертикалі в середині контейнера*/
+            align-content: space-evenly; /*розставляємо блоки в середині контейнера*/
+            justify-content: center; /* блоки стають по центру контейнера*/
+        }
+
+        .wrapper > div { /*блоки div які вкладені в контейнер з класом wrapper*/
+            width: 50%; /*ширина блоків 50% ширини контейнера*/
+            padding: 15px; /*відстань між вмістом блока та його рамкою*/
+            text-align: center; /*вирівнюємо текст по центру блока*/
+            font-size: x-large; /*розмір тексту всередині блока*/
+        }
+
+        .gold {
+            background-color: gold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .violet {
+            background-color: darkviolet;
+        }
+
+        .grey {
+            background-color: gray;
+        }
+        .orange {
+            background-color: orange;
+        }
+
+        .skyblue {
+            background-color: skyblue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper"> <!--контейнер-->
+    <!--вісім блоків div-->
+    <div class="red">червоний блок 1</div>
+    <div class="blue">синій блок 2</div>
+    <div class="gold">жовтий блок 3</div>
+    <div class="green">зелений блок 4</div>
+    <div class="violet">фіолетовий блок 5</div>
+    <div class="grey">сірий блок 6</div>
+    <div class="orange">оранжевий блок 7</div>
+    <div class="skyblue">блакитний блок 8</div>
+</div>
+<!--div>p*3 ">" - вкладеність ('p' всередені 'div'), "*" - кількість (p*3 - 3 тега 'p')-->
+<!--div.red+p - div з класом 'red', "+" - створює окремі теги (не вкладені)-->
+<!--div(span>p*3)+p - "()" все що всередині дужок буде вложене в div-->
+<!--#blue - div з id = 'blue', якщо потрібен інший тег то пишем так: тег#blue-->
+<!--p[title="text"] - "[]" всередині дужок пишемо будь'які атрибути-->
+<!--btn{click me} - "{}" всередині дужок пишемо текст який буде всередині тега-->
+<!--link:css - підключаемо зовнішні стилі, meta:vp - підключаємо "viewport"-->
+<!--form:get - створює форму з методом "get", input:p - input з type = "password"-->
+<!--btn:s - кнопка з type = "submit", ftr - footer, adr - address, і тому подібне-->
+</body>
+</html>
+

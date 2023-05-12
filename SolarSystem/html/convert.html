@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Seconds to Days</title>
+    <style>
+
+        body {
+            font-size: 1.2vw;
+            text-align: center;
+        }
+
+        div {
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        input {
+            font-size: 1.2vw;
+            text-align: center;
+            width: 10%;
+        }
+
+        #result-output {
+            width: 40%;
+        }
+
+        #result-output1 {
+            width: 30%;
+        }
+
+        button {
+            font-size: 1.2vw;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div>
+    <h2>Конвертація кілометрів в світловий (св.) час</h2>
+    <label for="million-kilometers-input">Введіть мільйони кілометрів:</label>
+    <input type="number" id="million-kilometers-input">
+    <button id="convert-button">Конвертувати</button>
+
+    <label for="result-output">Результат:</label>
+    <input type="text" id="result-output" readonly>
+    <p>Нажміть <b>Ctrl+Shift+I</b> щоб побачити розрахунки світлового часу для планет в консолі</p>
+</div>
+
+<div>
+    <h2>Конвертація секунд в загальний час</h2>
+    <label for="seconds-input">Введіть секунди:</label>
+    <input type="number" id="seconds-input">
+    <button id="convert-button1">Конвертувати</button>
+
+    <label for="result-output1">Результат:</label>
+    <input type="text" id="result-output1" readonly>
+</div>
+
+<script src="../js/convLightSec.js"></script>
+<script src="../js/convSeconds.js"></script>
+</body>
+
+</html>

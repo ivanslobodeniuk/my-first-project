@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solar System Animation</title>
+    <style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /*overflow: hidden;*/
+}
+
+.container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-image: url("../img/sun.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    /*box-shadow: 0 0 3em white;*/
+}
+
+.mercury, .venus, .earth, .moon, .mars,
+.phobos, .deimos, .jupiter, .io, .europa,
+.ganymede, .callisto, .saturn, .titan,
+.rhea, .iapetus, .dione, .tethys, .enceladus,
+.mimas, .uranus, .neptune {
+    position: absolute;
+    border-style: solid;
+    /*border-color: white;*/
+    border-width: 0.0em;
+    border-radius: 50%;
+}
+
+.mercury {
+    top: 12.5em; /*положення орбіти*/
+    left: 12.5em;
+    width: 15em; /*ширина орбіти*/
+    height: 15em;
+    animation: orbit 2.4s linear infinite;
+}
+
+.venus {
+    top: 4.5em;
+    left: 4.5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 6.2s linear infinite;
+}
+
+.earth {
+    top: -3em;
+    left: -3em;
+    width: 45em;
+    height: 45em;
+    animation: orbit 10s linear infinite;
+}
+
+.moon {
+    top: 2.5em;
+    right: 2.5em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 10s linear infinite;
+}
+
+.mars {
+    top: -10.5em;
+    left: -10.5em;
+    width: 60em;
+    height: 60em;
+    animation: orbit 19s linear infinite;
+}
+
+.phobos {
+    top: 6.2em;
+    right: 6.2em;
+    width: 5em;
+    height: 5em;
+    animation: orbit 10s linear infinite;
+}
+
+.deimos {
+    top: 4.7em;
+    right: 4.7em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 11s linear infinite;
+}
+
+.jupiter {
+    top: -25em;
+    left: -25em;
+    width: 90em;
+    height: 90em;
+    animation: orbit 118s linear infinite;
+}
+
+.io {
+    top: 9.7em;
+    right: 9.7em;
+    width: 7em;
+    height: 7em;
+    animation: orbit 10s linear infinite;
+}
+
+.europa {
+    top: 9.2em;
+    right: 9.2em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 11s linear infinite;
+}
+
+.ganymede {
+    top: 8.2em;
+    right: 8.2em;
+    width: 10em;
+    height: 10em;
+    animation: orbit 12s linear infinite;
+}
+
+.callisto {
+    top: 6.2em;
+    right: 6.2em;
+    width: 14em;
+    height: 14em;
+    animation: orbit 14s linear infinite;
+}
+
+.saturn {
+    top: -40em;
+    left: -40em;
+    width: 120em;
+    height: 120em;
+    animation: orbit 294s linear infinite;
+}
+
+.titan {
+    top: 11.8em;
+    right: 11.8em;
+    width: 11em;
+    height: 11em;
+    animation: orbit 15s linear infinite;
+}
+
+.rhea {
+    top: 13.2em;
+    right: 13.2em;
+    width: 8em;
+    height: 8em;
+    animation: orbit 14s linear infinite;
+}
+
+.iapetus {
+    top: 11.3em;
+    right: 11.3em;
+    width: 12em;
+    height: 12em;
+    animation: orbit 16s linear infinite;
+}
+
+.dione {
+    top: 13.7em;
+    right: 13.7em;
+    width: 7em;
+    height: 7em;
+    animation: orbit 13s linear infinite;
+}
+
+.tethys {
+    top: 14.2em;
+    right: 14.2em;
+    width: 6em;
+    height: 6em;
+    animation: orbit 12s linear infinite;
+}
+
+.enceladus {
+    top: 14.7em;
+    right: 14.7em;
+    width: 5em;
+    height: 5em;
+    animation: orbit 10s linear infinite;
+}
+
+.mimas {
+    top: 15.2em;
+    right: 15.2em;
+    width: 4em;
+    height: 4em;
+    animation: orbit 11s linear infinite;
+}
+
+.uranus {
+    top: -55em;
+    left: -55em;
+    width: 150em;
+    height: 150em;
+    animation: orbit 840s linear infinite;
+}
+
+.neptune {
+    top: -70em;
+    left: -70em;
+    width: 180em;
+    height: 180em;
+    animation: orbit 1648s linear infinite;
+}
+
+.mercury::before, .venus::before, .earth::before, .moon::before,
+.mars::before, .phobos::before, .deimos::before, .jupiter::before,
+.io::before, .europa::before, .ganymede::before, .callisto::before,
+.saturn::before, .titan::before, .rhea::before, .iapetus::before,
+.dione::before,.tethys::before,.enceladus::before,.mimas::before,
+.uranus::before, .neptune::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mercury::before {
+    top: 1.2em; /*положення на орбіті*/
+    right: 1.2em;
+    width: 2em; /*розмір*/
+    height: 2em;
+    background-image: url("../img/mercury.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.venus::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-image: url("../img/venus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.earth::before {
+    top: 5em;
+    right: 5em;
+    width: 3em;
+    height: 3em;
+    background-image:url("../img/earth.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1em;
+    height: 1em;
+    background-image: url("../img/moon.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mars::before {
+    top: 7.8em;
+    right: 7.8em;
+    width: 2em;
+    height: 2em;
+    background-image: url("../img/mars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.phobos::before {
+    top: 0.6em;
+    right: 0.6em;
+    width: 0.3em;
+    height: 0.3em;
+    background-image: url("../img/phobos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.deimos::before {
+    top: 1em; /*розташування на оріті*/
+    right: 1em;
+    width: 0.3em; /*розмір*/
+    height: 0.3em;
+    background-image: url("../img/deimos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jupiter::before {
+    top: 10.3em;
+    right: 10.3em;
+    width: 6em;
+    height: 6em;
+    background-image: url("../img/jupiter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.io::before {
+    top: 0.6em;
+    right: 0.6em;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url("../img/io.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.europa::before {
+    top: 0.7em;
+    right: 0.7em;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url("../img/europa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ganymede::before {
+    top: 0.9em;
+    right: 0.9em;
+    width: 1em;
+    height: 1em;
+    background-image: url("../img/ganymede.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.callisto::before {
+    top: 1.6em;
+    right: 1.6em;
+    width: 0.9em;
+    height: 0.9em;
+    background-image: url("../img/callisto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.saturn::before {
+    top: 12.5em;
+    right: 12.5em;
+    width: 10em;
+    height: 10em;
+    background-image: url("../img/saturn.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.titan::before {
+    top: 1.1em;
+    right: 1.1em;
+    width: 1em;
+    height: 1em;
+    background-image: url("../img/titan.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rhea::before {
+    top: 0.8em;
+    right: 0.8em;
+    width: 0.7em;
+    height: 0.7em;
+    background-image: url("../img/rhea.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.iapetus::before {
+    top: 1.4em;
+    right: 1.4em;
+    width: 0.7em;
+    height: 0.7em;
+    background-image: url("../img/iapetus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dione::before {
+    top: 0.6em;
+    right: 0.6em;
+    width: 0.7em;
+    height: 0.7em;
+    background-image: url("../img/dione.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tethys::before {
+    top: 0.5em;
+    right: 0.5em;
+    width: 0.7em;
+    height: 0.7em;
+    background-image: url("../img/tethys.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.enceladus::before {
+    top: 0.4em;
+    right: 0.4em;
+    width: 0.6em;
+    height: 0.6em;
+    background-image: url("../img/enceladus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mimas::before {
+    top: 0.3em;
+    right: 0.3em;
+    width: 0.6em;
+    height: 0.6em;
+    background-image: url("../img/mimas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.uranus::before {
+    top: 20em;
+    right: 20em;
+    width: 4em;
+    height: 4em;
+    background-image: url("../img/uranus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.neptune::before {
+    top: 24.2em;
+    right: 24.2em;
+    width: 4em;
+    height: 4em;
+    background-image: url("../img/neptune.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(1turn);
+    }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sun"></div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+        <div class="moon"></div>
+    </div>
+    <div class="mars">
+        <div class="phobos"></div>
+        <div class="deimos"></div>
+    </div>
+    <div class="jupiter">
+        <div class="io"></div>
+        <div class="europa"></div>
+        <div class="ganymede"></div>
+        <div class="callisto"></div>
+    </div>
+    <div class="saturn">
+        <div class="titan"></div>
+        <div class="rhea"></div>
+        <div class="iapetus"></div>
+        <div class="dione"></div>
+        <div class="tethys"></div>
+        <div class="enceladus"></div>
+        <div class="mimas"></div>
+    </div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+</div>
+</body>
+</html>
