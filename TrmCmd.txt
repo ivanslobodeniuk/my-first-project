@@ -65,7 +65,7 @@ git merge mybr        - стати на основну гілку(git checkout m
 cd /opt/lampp/htdocs - заходимо в потрібну нам директорію
 git st - перевіряємо статус
 git add . - підготовлюємо файли для commit
-git cm -m "add changes" - робимо commit('-m' - коментарій)
+git commit -m "add changes" - робимо commit('-m' - коментарій)
 git log - перегляд історії commits
 git push origin master - закидаємо файли на github
 
