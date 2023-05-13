@@ -1,58 +1,45 @@
-let showOrHideForm = function () {
-    let button = document.getElementById('form_register');
-    let form = document.getElementById('register-form');
-    if (form.style.display === 'block') {
-        form.style.display = 'none';
-        button.innerText = 'Показати налаштування';
-    } else {
-        form.style.display = 'block';
-        button.innerText = 'Сховати налаштування';
-    }
-}
+const showOrHideForm = () => {
+    const button = document.getElementById('form_register');
+    const form = document.getElementById('register-form');
+    const isFormVisible = form.style.display === 'block';
 
-let orbitCheckbox = document.getElementById("orbitCheckbox");
-let elements = document.querySelectorAll(".mercury, .venus, .earth, .moon, .mars, .phobos, .deimos, .jupiter, .io, .europa, .ganymede, .callisto, .saturn, .titan, .rhea, .iapetus, .dione, .tethys, .enceladus, .mimas, .uranus, .titania, .oberon, .umbriel, .ariel, .miranda, .neptune, .triton, .proteus");
+    form.style.display = isFormVisible ? 'none' : 'block';
+    button.innerText = isFormVisible ? 'Показати налаштування' : 'Сховати налаштування';
+};
 
-orbitCheckbox.addEventListener("click", function () {
-    if (orbitCheckbox.checked) {
-        // Якщо прапорець відмічений, застосовуємо новий стиль
-        elements.forEach(function (element) {
-            element.style.borderWidth = "0.1em";
-        });
-    } else {
-        // Якщо прапорець не відмічений, скидаємо стиль
-        elements.forEach(function (element) {
-            element.style.borderWidth = "0.0em";
-        });
-    }
+// Чекбокс - показати орбіти
+
+const orbitCheckbox = document.getElementById("orbitCheckbox");
+const container = document.querySelector(".container");
+const elements = container.querySelectorAll("div");
+
+orbitCheckbox.addEventListener("click", () => {
+    const borderWidth = orbitCheckbox.checked ? "0.1em" : "0.0em";
+    elements.forEach(element => {
+        element.style.borderWidth = borderWidth;
+    });
 });
 
-let speedSatellitesCheckbox = document.getElementById("speedSatellitesCheckbox");
-let satellites = document.querySelectorAll(".moon, .phobos, .deimos, .io, .europa, .ganymede, .callisto, .titan, .rhea, .iapetus, .dione, .tethys, .enceladus, .mimas, .titania, .oberon, .umbriel, .ariel, .miranda, .triton, .proteus");
+// Чекбокс - зменшити швидкість супутників
 
-let initialAnimationSpeeds = [];
+const speedSatellitesCheckbox = document.getElementById("speedSatellitesCheckbox");
+const satellites = document.querySelectorAll('.earth div, .mars div, .jupiter div, .saturn div, .uranus div, .neptune div');
 
-// Зберігаємо початкову швидкість анімації для кожного елемента
-satellites.forEach(function(element) {
-    initialAnimationSpeeds.push(getComputedStyle(element).animationDuration);
-});
-
-speedSatellitesCheckbox.addEventListener("click", function() {
+speedSatellitesCheckbox.addEventListener("click", () => {
     if (speedSatellitesCheckbox.checked) {
-        satellites.forEach(function(element, index) {
-            // Змінюємо швидкість кожного елемента
-            let orbitSpeed = 1.0 + (index * 0.1); // Розрахунок швидкості обертання для кожного елемента
-            element.style.animationDuration = `${orbitSpeed}s`;
-            // Додайте інші зміни стилю, які вам потрібні
+        satellites.forEach(satellite => {
+            const currentAnimationDuration = parseFloat(getComputedStyle(satellite).animationDuration);
+            satellite.style.animationDuration = currentAnimationDuration * 10 + 's';
         });
     } else {
-        satellites.forEach(function(element, index) {
-            // Повертаємо початкову швидкість анімації для кожного елемента
-            element.style.animationDuration = initialAnimationSpeeds[index];
-            // Додайте інші зміни стилю, які вам потрібні для початкового стану
+        satellites.forEach(satellite => {
+            satellite.style.animationDuration = '';
         });
     }
 });
+
+
+
 
 
 

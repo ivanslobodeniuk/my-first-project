@@ -35,7 +35,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    /*box-shadow: 0 0 3em white;*/
 }
 
 .mercury, .venus, .earth, .moon, .mars,
@@ -80,7 +79,7 @@ body {
     right: 2.5em;
     width: 8em;
     height: 8em;
-    animation: orbit 1.0s linear infinite;
+    animation: orbit 1s linear infinite;
 }
 
 .mars {
@@ -96,7 +95,7 @@ body {
     right: 6.2em;
     width: 5em;
     height: 5em;
-    animation: orbit 1.0s linear infinite;
+    animation: orbit 1s linear infinite;
 }
 
 .deimos {
@@ -120,7 +119,7 @@ body {
     right: 9.7em;
     width: 7em;
     height: 7em;
-    animation: orbit 1.0s linear infinite;
+    animation: orbit 1s linear infinite;
 }
 
 .europa {
@@ -172,10 +171,10 @@ body {
 }
 
 .iapetus {
-    top: 11.3em;
-    right: 11.3em;
-    width: 12em;
-    height: 12em;
+    top: 9.7em;
+    right: 9.7em;
+    width: 15em;
+    height: 15em;
     animation: orbit 1.8s linear infinite;
 }
 
@@ -200,7 +199,7 @@ body {
     right: 14.7em;
     width: 5em;
     height: 5em;
-    animation: orbit 1.0s linear infinite;
+    animation: orbit 1s linear infinite;
 }
 
 .mimas {
@@ -256,7 +255,7 @@ body {
     right: 19.4em;
     width: 5em;
     height: 5em;
-    animation: orbit 1.0s linear infinite;
+    animation: orbit 1s linear infinite;
 }
 
 .neptune {
@@ -276,10 +275,10 @@ body {
 }
 
 .proteus {
-    top: 22.2em;
-    right: 22.2em;
-    width: 8em;
-    height: 8em;
+    top: 23.2em;
+    right: 23.2em;
+    width: 6em;
+    height: 6em;
     animation: orbit 1.2s linear infinite;
 }
 
@@ -462,8 +461,8 @@ body {
 }
 
 .iapetus::before {
-    top: 1.4em;
-    right: 1.4em;
+    top: 1.8em;
+    right: 1.8em;
     width: 0.7em;
     height: 0.7em;
     background-image: url("../img/iapetus.jpg");
@@ -605,8 +604,8 @@ body {
 }
 
 .proteus::before {
-    top: 0.9em;
-    right: 0.9em;
+    top: 0.6em;
+    right: 0.6em;
     width: 0.4em;
     height: 0.4em;
     background-image: url("../img/proteus.jpg");
