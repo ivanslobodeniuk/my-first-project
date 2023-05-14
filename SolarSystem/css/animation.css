@@ -15,6 +15,21 @@ body {
     right: 0;
     color: white;
     z-index: 1;
+    font-size: 1vw;
+}
+
+#form_register {
+    font-size: 1vw;
+    border-radius: 2px;
+    border: gray solid 1px;
+}
+
+#pauseButton {
+    background: green;
+    color: white;
+    font-size: 1vw;
+    border-radius: 2px;
+    border: gray solid 1px;
 }
 
 .container {
@@ -296,10 +311,10 @@ body {
 }
 
 .mercury::before {
-    top: 1.2em; /*положення на орбіті*/
-    right: 1.2em;
-    width: 2em; /*розмір*/
-    height: 2em;
+    top: 1.6em; /*положення на орбіті*/
+    right: 1.6em;
+    width: 1.2em; /*розмір*/
+    height: 1.2em;
     background-image: url("../img/mercury.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -307,10 +322,10 @@ body {
 }
 
 .venus::before {
-    top: 2.8em;
-    right: 2.8em;
-    width: 3em;
-    height: 3em;
+    top: 3.2em;
+    right: 3.2em;
+    width: 2.2em;
+    height: 2.2em;
     background-image: url("../img/venus.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -318,10 +333,10 @@ body {
 }
 
 .earth::before {
-    top: 5em;
-    right: 5em;
-    width: 3em;
-    height: 3em;
+    top: 5.4em;
+    right: 5.4em;
+    width: 2.2em;
+    height: 2.2em;
     background-image:url("../img/earth.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -340,10 +355,10 @@ body {
 }
 
 .mars::before {
-    top: 7.8em;
-    right: 7.8em;
-    width: 2em;
-    height: 2em;
+    top: 8em;
+    right: 8em;
+    width: 1.6em;
+    height: 1.6em;
     background-image: url("../img/mars.jpg");
     background-size: cover;
     background-repeat: no-repeat;

@@ -8,12 +8,16 @@
 <body>
 <div class="menu">
     <button onclick="return showOrHideForm();" id="form_register">Налаштування анімації</button>
+    <button id="pauseButton">Зупинити анімацію</button>
     <div class="form" id="register-form" style="display: none">
         <input type="checkbox" id="orbitCheckbox">
         <label for="orbitCheckbox">Показати орбіти</label>
         <br>
         <input type="checkbox" id="speedSatellitesCheckbox">
         <label for="speedSatellitesCheckbox">Зменшити швидкість<br> для супутників</label>
+        <br>
+        <input type="checkbox" id="speedPlanetCheckbox">
+        <label for="speedPlanetCheckbox">Збілишити швидкість<br> для планет</label>
     </div>
 </div>
 <div class="container">
