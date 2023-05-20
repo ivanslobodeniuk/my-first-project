@@ -1,12 +1,12 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
 }
 
 .gallery-item {
     flex-basis: calc(33% - 20px);
-    margin: 10px;
+    margin: 13px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -16,6 +16,7 @@
     display: block;
     width: 100%;
     height: auto;
+    border: black 1px solid;
 }
 
 .gallery-item .overlay {
@@ -46,16 +47,12 @@ pre {
     height: 60%;
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
+h1, h2 {
     text-align: center;
 }
 
 a {
-    font-size: 30px;
+    font-size: 1.5vw;
     text-decoration: none;
 }
 
@@ -71,4 +68,33 @@ a {
 
 li {
     padding-bottom: 20px;
+}
+
+.navigation-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    padding: 10px;
+}
+
+.navigation-panel a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;
+    border: black 1px dashed;
+    border-radius: 3px;
+    background: #fdffaf;
+}
+
+.navigation-panel a:hover {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;
+    border: black 1px solid;
+    border-radius: 3px;
+    background: #fffa00;
+    font-size: 36px;
 }

@@ -37,6 +37,7 @@ convertButton.addEventListener("click", () => {
 
 
 // calculation of distances to planets in light time
+const output = document.getElementById("output");
 const distances = { // 1 a.u. = 149597870,7 km
     mercury: 57.909100,
     venus: 108.942110,
@@ -56,5 +57,5 @@ const distances = { // 1 a.u. = 149597870,7 km
 
 for (const planet in distances) {
     const lightYears = convertMillionKilometersToLightYears(distances[planet]);
-    console.log(`${planet}: ${lightYears}`);
+    output.innerHTML += `<strong>${planet}: ${lightYears}<br><br></strong>`;
 }

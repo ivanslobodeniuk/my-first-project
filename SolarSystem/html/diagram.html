@@ -7,64 +7,57 @@
     <meta name="description" content="diagram for Solar System"> <!-- Опис мого веб-сайту -->
     <meta name="keywords" content="solar, system, diagram"> <!-- ключові слова для пошуку (веб-сайт, HTML, CSS) -->
     <meta name="author" content="Ivan"> <!-- Ваше ім'я -->
+    <link rel="stylesheet" href="../css/diagram.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-    <style>
-    header {
-        text-align: center;
-    }
-
-    .container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    canvas {
-        max-width: 100%;
-        display: block;
-        width: 75%;
-        height: 75%;
-        margin: auto;
-    }
-
-    p {
-        text-align: center;
-        font-size: 1.5vw;
-        background: LightSkyBlue;
-    }
-
-    h3 {
-        text-align: center;
-    }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Діаграми</h1>
-    </header>
-    <main>
-        <!-- <p>Тут можна написати текст сторінки</p> -->
-    </main>
+<header>
+    <h1>Діаграми</h1>
+</header>
+<main>
+    <!-- <p>Тут можна написати текст сторінки</p> -->
+</main>
+
+<div class="container">
+    <button class="preview"><img src="../img/preview.png" alt="btn preview" style="opacity: 0.5;" title="Попередня діаграма"></button>
+    <button class="next"><img src="../img/next.png" alt="btn next" title="Наступна діаграма"></button>
+    <p>Діаграма для еквароріальних радіусів планет</p>
+    <canvas id="myChart"></canvas>
+</div>
+
+<div class="container-invisible">
+    <button class="preview"><img src="../img/preview.png" alt="btn preview" title="Попередня діаграма"></button>
+    <button class="next"><img src="../img/next.png" alt="btn next" style="opacity: 0.5;" title="Наступна діаграма"></button>
     <p>Діаграма для густин Сонця і планет</p>
-    <div class="container">
-        <canvas id="myChart"></canvas>
-    </div>
+    <canvas id="myChart1"></canvas>
+</div>
+
+<div class="container1">
+    <button class="preview"><img src="../img/preview.png" alt="btn preview" style="opacity: 0.5;" title="Попередня діаграма"></button>
+    <button class="next1"><img src="../img/next.png" alt="btn next" title="Наступна діаграма"></button>
     <p>Діаграма для мас Сонця і планет</p>
     <h3>Як видно на діаграмі - маса Сонця складає близько 99.86% від маси всіх планет</h3>
-    <div class="container">
-        <canvas id="myChart2"></canvas>
-    </div>
-    <p>Діаграма Scatter (розсіювання) відстаней від Сонця до планет Сонячної системи (в млн. км і а.о.)</p>
-    <div class="container">
-        <canvas id="scatterChart"></canvas>
-    </div>
-    <footer>
-        <h3>&copy; 2023 - Мій не перший і не останній веб-сайт</h3>
-    </footer>
-    <script src="../js/diagram.js"></script>
+    <canvas id="myChart2"></canvas>
+</div>
+
+<div class="container-invisible1">
+    <button class="preview1"><img src="../img/preview.png" alt="btn preview" title="Попередня діаграма"></button>
+    <button class="next"><img src="../img/next.png" alt="btn next" style="opacity: 0.5;" title="Наступна діаграма"></button>
+    <p>Діаграма для об'ємів Сонця і планет</p>
+    <h3>Як видно на діаграмі - об'єм Сонця складає близько 99.84% від маси всіх планет</h3>
+    <canvas id="myChart3"></canvas>
+</div>
+
+<div class="container">
+    <p>Діаграма відстаней від Сонця до планет Сонячної системи</p>
+    <canvas id="scatterChart"></canvas>
+</div>
+
+<footer>
+    <h3>&copy; 2023 - Мій не перший і не останній веб-сайт</h3>
+</footer>
+<script src="../js/diagram.js"></script>
 </body>
 
 </html>

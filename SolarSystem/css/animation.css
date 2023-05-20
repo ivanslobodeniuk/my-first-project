@@ -14,8 +14,8 @@ body {
     top: 0;
     right: 0;
     color: white;
-    z-index: 1;
     font-size: 1vw;
+    z-index: 1;
 }
 
 #form_register {
@@ -47,23 +47,17 @@ body {
     height: 10em;
     background-image: url("../img/sun.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     border-radius: 50%;
 }
 
-.mercury, .venus, .earth, .moon, .mars,
-.phobos, .deimos, .jupiter, .io, .europa,
-.ganymede, .callisto, .saturn, .titan,
-.rhea, .iapetus, .dione, .tethys, .enceladus,
-.mimas, .uranus, .titania, .oberon, .umbriel,
-.ariel, .miranda, .neptune, .triton, .proteus {
+.container div:not(.sun) {
     position: absolute;
     border-style: solid;
     border-color: white;
     border-width: 0.0em;
     border-radius: 50%;
 }
+
 
 .mercury {
     top: 12.5em; /*положення орбіти*/
@@ -297,14 +291,7 @@ body {
     animation: orbit 1.2s linear infinite;
 }
 
-.mercury::before, .venus::before, .earth::before, .moon::before,
-.mars::before, .phobos::before, .deimos::before, .jupiter::before,
-.io::before, .europa::before, .ganymede::before, .callisto::before,
-.saturn::before, .titan::before, .rhea::before, .iapetus::before,
-.dione::before,.tethys::before,.enceladus::before,.mimas::before,
-.uranus::before, .titania::before,.oberon::before,.umbriel::before,
-.ariel::before,.miranda::before, .neptune::before, .triton::before,
-.proteus::before {
+.container div:not(.sun)::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -317,8 +304,6 @@ body {
     height: 1.2em;
     background-image: url("../img/mercury.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venus::before {
@@ -328,8 +313,6 @@ body {
     height: 2.2em;
     background-image: url("../img/venus.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .earth::before {
@@ -339,8 +322,6 @@ body {
     height: 2.2em;
     background-image:url("../img/earth.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .moon::before {
@@ -350,8 +331,6 @@ body {
     height: 0.8em;
     background-image: url("../img/moon.jpeg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .mars::before {
@@ -361,8 +340,6 @@ body {
     height: 1.6em;
     background-image: url("../img/mars.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .phobos::before {
@@ -372,19 +349,15 @@ body {
     height: 0.3em;
     background-image: url("../img/phobos.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .deimos::before {
-    top: 1em; /*розташування на оріті*/
+    top: 1em;
     right: 1em;
-    width: 0.3em; /*розмір*/
+    width: 0.3em;
     height: 0.3em;
     background-image: url("../img/deimos.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .jupiter::before {
@@ -394,8 +367,6 @@ body {
     height: 6em;
     background-image: url("../img/jupiter.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .io::before {
@@ -405,8 +376,6 @@ body {
     height: 0.8em;
     background-image: url("../img/io.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .europa::before {
@@ -416,8 +385,6 @@ body {
     height: 0.8em;
     background-image: url("../img/europa.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .ganymede::before {
@@ -427,8 +394,6 @@ body {
     height: 1em;
     background-image: url("../img/ganymede.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .callisto::before {
@@ -438,8 +403,6 @@ body {
     height: 0.9em;
     background-image: url("../img/callisto.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .saturn::before {
@@ -449,8 +412,6 @@ body {
     height: 10em;
     background-image: url("../img/saturn.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .titan::before {
@@ -460,8 +421,6 @@ body {
     height: 1em;
     background-image: url("../img/titan.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .rhea::before {
@@ -471,8 +430,6 @@ body {
     height: 0.7em;
     background-image: url("../img/rhea.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .iapetus::before {
@@ -482,8 +439,6 @@ body {
     height: 0.7em;
     background-image: url("../img/iapetus.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .dione::before {
@@ -493,8 +448,6 @@ body {
     height: 0.6em;
     background-image: url("../img/dione.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tethys::before {
@@ -504,8 +457,6 @@ body {
     height: 0.6em;
     background-image: url("../img/tethys.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .enceladus::before {
@@ -515,8 +466,6 @@ body {
     height: 0.4em;
     background-image: url("../img/enceladus.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .mimas::before {
@@ -526,8 +475,6 @@ body {
     height: 0.4em;
     background-image: url("../img/mimas.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .uranus::before {
@@ -537,8 +484,6 @@ body {
     height: 4em;
     background-image: url("../img/uranus.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .titania::before {
@@ -548,8 +493,6 @@ body {
     height: 0.7em;
     background-image: url("../img/titania.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .oberon::before {
@@ -559,8 +502,6 @@ body {
     height: 0.7em;
     background-image: url("../img/oberon.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .umbriel::before {
@@ -570,8 +511,6 @@ body {
     height: 0.6em;
     background-image: url("../img/umbriel.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .ariel::before {
@@ -581,8 +520,6 @@ body {
     height: 0.6em;
     background-image: url("../img/ariel.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .miranda::before {
@@ -592,8 +529,6 @@ body {
     height: 0.4em;
     background-image: url("../img/miranda.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .neptune::before {
@@ -603,8 +538,6 @@ body {
     height: 4em;
     background-image: url("../img/neptune.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .triton::before {
@@ -614,8 +547,6 @@ body {
     height: 0.8em;
     background-image: url("../img/triton.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .proteus::before {
@@ -625,8 +556,6 @@ body {
     height: 0.4em;
     background-image: url("../img/proteus.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 @keyframes orbit {

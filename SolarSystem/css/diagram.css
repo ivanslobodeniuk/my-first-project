@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 2.5vw;
+    background: olive;
+    -webkit-background-clip: text; /* Кліпування фону за текстом */
+    -webkit-text-fill-color: transparent; /* Прозорий колір тексту */
+}
+
+.container, .container1 {
+    display: block;
+}
+
+.container-invisible, .container-invisible1 {
+    display: none;
+}
+
+canvas {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#myChart2, #myChart3 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.next, .next1 {
+    float: right;
+    margin-left: -30%;
+    margin-right: 30%;
+    background: transparent;
+    border: none;
+}
+
+.next, .next1 img {
+    filter: brightness(0.8); /* Зменшити яскравість на 20% (0.8 * 100%) */
+}
+
+.preview, .preview1 {
+    float: left;
+    background: transparent;
+    border: none;
+    margin-left: 30%;
+    margin-right: -30%;
+}
+
+.preview, .preview1 img {
+    filter: brightness(0.8); /* Зменшити яскравість на 20% (0.8 * 100%) */
+}
+
+img {
+    width: 1.6vw;
+    height: 1.6vw;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5vw;
+    background: LightSkyBlue;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+

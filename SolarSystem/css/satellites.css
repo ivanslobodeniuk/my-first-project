@@ -4,27 +4,15 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: left;
     align-items: center;
-    margin-bottom: 30px;
+    margin-top: 10%;
 }
 
-.planet {
+.planet, .satellites {
     text-align: center;
-    margin-right: 5%;
-    margin-bottom: 1%;
-    border: dashed black 1px;
-    background: black;
-    color: white;
-}
-
-.satellites {
-    text-align: center;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    border: dashed black 1px;
     background: black;
     color: white;
 }
@@ -32,8 +20,6 @@ body {
 img {
     width: 250px;
     height: 250px;
-    margin: 10px;
-    border: 1px solid black;
     position: relative;
 }
 
@@ -46,12 +32,15 @@ img {
     position: static;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
     color: white;
 }
 
-h3 {
-    text-align: center;
-    color: white;
+@media (min-width: 2560px) and (min-height: 1440px) {
+    img {
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
 }
