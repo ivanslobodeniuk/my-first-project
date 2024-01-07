@@ -1,5 +1,6 @@
 // 'use strict'
 
+
 // for (let i = 0; i < 10; i++) {
 //     // out.textContent += i;
 //     out.innerHTML += i + ' integer ';
@@ -1139,7 +1140,7 @@ function randomColor() {
 // let user = new User("Іван");
 // user.sayHi();
 
-                          // GitHab ShowAwatar
+                          // GitHab ShowAvatar
 
 // async function showAvatar() {
 
@@ -1147,7 +1148,7 @@ function randomColor() {
 //   let response = await fetch('/article/promise-chaining/user.json');
 //   let user = await response.json();
 
-//   // зчитуємо користувача github
+//   // зчитуємо користувача git
 //   let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
 //   let githubUser = await githubResponse.json();
 
@@ -1163,7 +1164,6 @@ function randomColor() {
 //   img.remove();
 
 //   return githubUser;
-// }
 
 // showAvatar();
 
@@ -1214,7 +1214,7 @@ function randomColor() {
 
 // numbers.push(1);
 // numbers.push(2);
-// // numbers.push('true'); // Uncaught TypeError: 'set' on proxy: trap returned falsish for property '2' at Proxy.push (<anonymous>)
+// // numbers.push('true'); // Uncaught TypeError: 'set' on proxy: trap returned falsify for property '2' at Proxy.push (<anonymous>)
 
 // console.log(numbers);
 

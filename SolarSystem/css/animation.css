@@ -21,7 +21,7 @@ body {
 #form_register {
     font-size: 1vw;
     border-radius: 2px;
-    border: gray solid 1px;
+    border: rgb(128, 128, 128) solid 1px;
 }
 
 #pauseButton {
@@ -29,7 +29,7 @@ body {
     color: white;
     font-size: 1vw;
     border-radius: 2px;
-    border: gray solid 1px;
+    border: rgb(128, 128, 128) solid 1px;
 }
 
 .container {
