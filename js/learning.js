@@ -1,6 +1,5 @@
 // 'use strict'
 
-
 // for (let i = 0; i < 10; i++) {
 //     // out.textContent += i;
 //     out.innerHTML += i + ' integer ';
