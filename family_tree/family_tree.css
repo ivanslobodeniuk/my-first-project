@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.family-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.generation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.person {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 0 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 80px;
+}
+
+.uncle-ant {
+    display: flex;
+    justify-content: center;
+}
+
+.container-invisible,
+.container-invisible-reverse {
+    display: none;
+    justify-content: center;
+}
+
+.hide-reverse,
+.show {
+    display: none;
+}
+
+.great-grandfather .person {
+    background-color: #fdffaf;
+}
+.grandparents .person {
+    background-color: #ffcccb;
+}
+
+.parents .person {
+    background-color: #ccffcb;
+}
+
+.children .person {
+    background-color: #ccccff;
+}

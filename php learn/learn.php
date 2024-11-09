@@ -1,4 +1,4 @@
-global$dog; global$dog; <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -143,9 +143,9 @@ global$dog; global$dog; <!DOCTYPE html>
 //$result = calculate_sum(2, 4, 5, 8);
 //echo $result; // Виведе сумму всіх аргументів
 ?>
-<h1 style="color: hotpink">
-    <?php
-    $str = 'привіт світ';
+<!--<h1 style="color: hotpink">-->
+<!--    --><?php
+//    $str = 'привіт світ';
 //    echo $str[0]; // вертає 2 біт замість 1-го для латиниці
 //    echo '<br>';
 //    echo strlen($str). '- strlen'; // кирилиця має 2 біти на символ
@@ -426,43 +426,87 @@ global$dog; global$dog; <!DOCTYPE html>
 
 // перевірка чи дочірній клас наслідує батьківський за допомогою instanceOf
 // Базовий (батьківський) клас
-class Animal
-{
-    // Інформація про кількість лап
-    protected int $legs = 4;
+//class Animal
+//{
+//    // Інформація про кількість лап
+//    protected int $legs = 4;
+//
+//    // Метод для виведення інформації про тварину
+//    public function info(): void
+//    {
+//        echo "У мене {$this->legs} лапи.";
+//    }
+//}
+//
+//// Похідний (нащадковий) клас, який наслідує базовий клас Animal
+//class Dog extends Animal
+//{
+//    // Ім'я собаки
+//    public string $name = "Собака";
+//
+//    // Перевизначений метод info() для собаки
+//    public function info(): void
+//    {
+//        echo "Я {$this->name}, У мене {$this->legs} лапи.";
+//    }
+//}
+//
+//// Створення об'єкта класу Dog
+//$dog = new Dog();
+//
+//// Перевірка, чи клас Dog наслідує клас Animal
+//if ($dog instanceof Animal) {
+//    echo "Клас Dog наслідує клас Animal.";
+//} else {
+//    echo "Клас Dog не наслідує клас Animal.";
+//}
 
-    // Метод для виведення інформації про тварину
-    public function info(): void
-    {
-        echo "У мене {$this->legs} лапи.";
-    }
-}
+//echo $_SERVER['HTTP_USER_AGENT']; // інформація про сервер
+//if (str_contains($_SERVER['HTTP_USER_AGENT'], 'FireFox')) { // перевірка браузера
+//    echo 'Ви використовуєте Firefox.';
+//} else {
+//    echo   'У вас Google Chrome.';
+//}
 
-// Похідний (нащадковий) клас, який наслідує базовий клас Animal
-class Dog extends Animal
-{
-    // Ім'я собаки
-    public string $name = "Собака";
-
-    // Перевизначений метод info() для собаки
-    public function info(): void
-    {
-        echo "Я {$this->name}, У мене {$this->legs} лапи.";
-    }
-}
-
-// Створення об'єкта класу Dog
-$dog = new Dog();
-
-// Перевірка, чи клас Dog наслідує клас Animal
-if ($dog instanceof Animal) {
-    echo "Клас Dog наслідує клас Animal.";
-} else {
-    echo "Клас Dog не наслідує клас Animal.";
-}
+//echo get_debug_type([])
 
 
 ?>
+<?php //= 'the same as it echo'// Не рекомендується використовувати короткі теги?>
+
+<?php
+//// Визначення перерахування Suit
+//enum Suit
+//{
+//    case Hearts;
+//    case Diamonds;
+//    case Clubs;
+//    case Spades;
+//}
+//
+//// Функція, яка приймає аргумент типу Suit
+//function do_stuff(Suit $s): void
+//{
+//    // Приклад використання switch для обробки різних значень enum
+//    switch ($s) {
+//        case Suit::Hearts:
+//            echo "You selected Hearts.\n";
+//            break;
+//        case Suit::Diamonds:
+//            echo "You selected Diamonds.\n";
+//            break;
+//        case Suit::Clubs:
+//            echo "You selected Clubs.\n";
+//            break;
+//        case Suit::Spades:
+//            echo "You selected Spades.\n";
+//            break;
+//    }
+//}
+//
+//// Виклик функції з аргументом Suit::Spades
+//do_stuff(Suit::Spades);
+//?>
 
 </body>
 </html>

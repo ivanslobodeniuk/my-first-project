@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Розташовує елементи по горизонталі */
+        }
+        .sliders {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px; /* Відступ між повзунками і колірним блоком */
+        }
+        .slider {
+            margin: 20px;
+        }
+        .color-box {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>RGB Color Mixer</h1>
+
+<div class="container">
+    <!-- Секція з кольоровим блоком -->
+    <div>
+        <div class="color-box" id="color-box"></div>
+    </div>
+    <!-- Секція з повзунками -->
+    <div class="sliders">
+        <label for="red">Red: <span id="red-value">0</span></label>
+        <input type="range" id="red" class="slider" min="0" max="255" value="0" step="1">
+
+        <label for="green">Green: <span id="green-value">0</span></label>
+        <input type="range" id="green" class="slider" min="0" max="255" value="0" step="1">
+
+        <label for="blue">Blue: <span id="blue-value">0</span></label>
+        <input type="range" id="blue" class="slider" min="0" max="255" value="0" step="1">
+    </div>
+</div>
+
+<script>
+    const redSlider = document.getElementById('red');
+    const greenSlider = document.getElementById('green');
+    const blueSlider = document.getElementById('blue');
+
+    const redValue = document.getElementById('red-value');
+    const greenValue = document.getElementById('green-value');
+    const blueValue = document.getElementById('blue-value');
+
+    const colorBox = document.getElementById('color-box');
+    const rgbValue = document.getElementById('rgb-value');
+
+    function updateColor() {
+        const red = redSlider.value;
+        const green = greenSlider.value;
+        const blue = blueSlider.value;
+
+        // Update the displayed values
+        redValue.textContent = red;
+        greenValue.textContent = green;
+        blueValue.textContent = blue;
+
+        // Update the color box
+        const rgbColor = `rgb(${red}, ${green}, ${blue})`;
+        colorBox.style.backgroundColor = rgbColor;
+
+        // Update the RGB text
+        rgbValue.textContent = rgbColor;
+    }
+
+    redSlider.addEventListener('input', updateColor);
+    greenSlider.addEventListener('input', updateColor);
+    blueSlider.addEventListener('input', updateColor);
+
+    // Initialize the color
+    updateColor();
+</script>
+
+</body>
+</html>
