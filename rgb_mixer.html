@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Mixer</title>
+    <title>Color Mixer with RGB Pixel Screen</title>
     <style>
+        /* Загальні стилі */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -15,43 +16,80 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row; /* Розташовує елементи по горизонталі */
+            flex-direction: row;
         }
         .sliders {
             display: flex;
             flex-direction: column;
-            margin-right: 30px; /* Відступ між повзунками і колірним блоком */
+            margin-right: 30px;
         }
         .slider {
             margin: 20px;
         }
-        .color-box {
+        .color-box, .pixel-screen, .large-pixel-screen {
             width: 400px;
             height: 200px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #000;
+            margin-top: 20px;
+        }
+        .pixel-screen {
+            display: flex;
+        }
+        .pixel {
+            flex: 1;
+            height: 100%;
+        }
+        .large-pixel-screen {
+            display: grid;
+            grid-template-columns: repeat(120, 1fr);
+            grid-template-rows: repeat(90, 1fr);
+            width: 480px;
+            height: 360px;
+            gap: 1px;
+            background-color: black;
+        }
+        .triple-pixel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .red-part, .green-part, .blue-part {
+            flex: 1;
+            height: 100%;
+        }
+        input[type="number"] {
+            width: 50px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
 
-<h1>RGB Color Mixer</h1>
+<h1>RGB Color Mixer with Pixel Screen</h1>
 
 <div class="container">
-    <!-- Секція з кольоровим блоком -->
     <div>
         <div class="color-box" id="color-box"></div>
+        <div class="pixel-screen">
+            <div class="pixel" id="red-pixel"></div>
+            <div class="pixel" id="green-pixel"></div>
+            <div class="pixel" id="blue-pixel"></div>
+        </div>
+        <div class="large-pixel-screen" id="large-pixel-screen"></div>
     </div>
-    <!-- Секція з повзунками -->
     <div class="sliders">
-        <label for="red">Red: <span id="red-value">0</span></label>
+        <label for="red">Red:
+            <input type="number" id="red-input" min="0" max="255" value="0">
+        </label>
         <input type="range" id="red" class="slider" min="0" max="255" value="0" step="1">
 
-        <label for="green">Green: <span id="green-value">0</span></label>
+        <label for="green">Green:
+            <input type="number" id="green-input" min="0" max="255" value="0">
+        </label>
         <input type="range" id="green" class="slider" min="0" max="255" value="0" step="1">
 
-        <label for="blue">Blue: <span id="blue-value">0</span></label>
+        <label for="blue">Blue:
+            <input type="number" id="blue-input" min="0" max="255" value="0">
+        </label>
         <input type="range" id="blue" class="slider" min="0" max="255" value="0" step="1">
     </div>
 </div>
@@ -61,36 +99,72 @@
     const greenSlider = document.getElementById('green');
     const blueSlider = document.getElementById('blue');
 
-    const redValue = document.getElementById('red-value');
-    const greenValue = document.getElementById('green-value');
-    const blueValue = document.getElementById('blue-value');
+    const redInput = document.getElementById('red-input');
+    const greenInput = document.getElementById('green-input');
+    const blueInput = document.getElementById('blue-input');
 
     const colorBox = document.getElementById('color-box');
-    const rgbValue = document.getElementById('rgb-value');
+    const redPixel = document.getElementById('red-pixel');
+    const greenPixel = document.getElementById('green-pixel');
+    const bluePixel = document.getElementById('blue-pixel');
+
+    const largePixelScreen = document.getElementById('large-pixel-screen');
+
+    for (let i = 0; i < 120 * 90; i++) {
+        const triplePixel = document.createElement('div');
+        triplePixel.classList.add('triple-pixel');
+
+        const redPart = document.createElement('div');
+        redPart.classList.add('red-part');
+        const greenPart = document.createElement('div');
+        greenPart.classList.add('green-part');
+        const bluePart = document.createElement('div');
+        bluePart.classList.add('blue-part');
+
+        triplePixel.appendChild(redPart);
+        triplePixel.appendChild(greenPart);
+        triplePixel.appendChild(bluePart);
+        largePixelScreen.appendChild(triplePixel);
+    }
 
     function updateColor() {
         const red = redSlider.value;
         const green = greenSlider.value;
         const blue = blueSlider.value;
 
-        // Update the displayed values
-        redValue.textContent = red;
-        greenValue.textContent = green;
-        blueValue.textContent = blue;
+        redInput.value = red;
+        greenInput.value = green;
+        blueInput.value = blue;
 
-        // Update the color box
-        const rgbColor = `rgb(${red}, ${green}, ${blue})`;
-        colorBox.style.backgroundColor = rgbColor;
+        colorBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 
-        // Update the RGB text
-        rgbValue.textContent = rgbColor;
+        redPixel.style.backgroundColor = `rgb(${red}, 0, 0)`;
+        greenPixel.style.backgroundColor = `rgb(0, ${green}, 0)`;
+        bluePixel.style.backgroundColor = `rgb(0, 0, ${blue})`;
+
+        const triplePixels = largePixelScreen.querySelectorAll('.triple-pixel');
+        triplePixels.forEach(pixel => {
+            pixel.children[0].style.backgroundColor = `rgb(${red}, 0, 0)`;
+            pixel.children[1].style.backgroundColor = `rgb(0, ${green}, 0)`;
+            pixel.children[2].style.backgroundColor = `rgb(0, 0, ${blue})`;
+        });
+    }
+
+    function updateSliderFromInput() {
+        redSlider.value = redInput.value;
+        greenSlider.value = greenInput.value;
+        blueSlider.value = blueInput.value;
+        updateColor();
     }
 
     redSlider.addEventListener('input', updateColor);
     greenSlider.addEventListener('input', updateColor);
     blueSlider.addEventListener('input', updateColor);
 
-    // Initialize the color
+    redInput.addEventListener('input', updateSliderFromInput);
+    greenInput.addEventListener('input', updateSliderFromInput);
+    blueInput.addEventListener('input', updateSliderFromInput);
+
     updateColor();
 </script>
 

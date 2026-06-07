@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tree Of Life</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+
+        html,body{
+            margin:0;
+            overflow:hidden;
+            background:
+                    radial-gradient(circle at center,
+                    #31464a 0%,
+                    #223438 45%,
+                    #172427 100%);
+            font-family:Arial,sans-serif;
+        }
+
+        /* ========================= */
+        /* SVG */
+        /* ========================= */
+
+        svg{
+            width:100vw;
+            height:100vh;
+            cursor:grab;
+        }
+
+        svg:active{
+            cursor:grabbing;
+        }
+
+        /* ========================= */
+        /* LINKS */
+        /* ========================= */
+
+        .link{
+
+            fill:none;
+
+            stroke-linecap:round;
+
+            opacity:0.82;
+
+            filter:
+                    drop-shadow(0 0 3px rgba(255,255,255,0.08));
+        }
+
+        /* ========================= */
+        /* NODES */
+        /* ========================= */
+
+        .node circle{
+
+            stroke:white;
+            stroke-width:1.5;
+
+            transition:0.25s;
+
+            filter:
+                    drop-shadow(0 0 50px rgba(0,0,0,0.6));
+        }
+
+        .node:hover circle{
+
+            transform:scale(1.15);
+
+            filter:
+                    drop-shadow(0 0 15px rgba(255,255,255,0.5));
+        }
+
+        .node text{
+
+            fill:white;
+
+            font-size:35px;
+
+            font-weight:bold;
+
+            letter-spacing:0.5px;
+
+            text-anchor:middle;
+
+            pointer-events:none;
+
+            text-shadow:
+                    0 0 8px rgba(0,0,0,0.8);
+        }
+
+        /* ========================= */
+        /* TOOLTIP */
+        /* ========================= */
+
+        .tooltip{
+
+            position:absolute;
+
+            background:
+                    rgba(20,20,20,0.92);
+
+            backdrop-filter:blur(8px);
+
+            color:white;
+
+            padding:10px 14px;
+
+            border-radius:14px;
+
+            font-size:14px;
+
+            pointer-events:none;
+
+            opacity:0;
+
+            transition:0.15s;
+
+            z-index:100;
+
+            border:
+                    1px solid rgba(255,255,255,0.1);
+
+            box-shadow:
+                    0 0 20px rgba(0,0,0,0.45);
+        }
+
+        /* ========================= */
+        /* PANEL */
+        /* ========================= */
+
+        .panel{
+
+            position:absolute;
+
+            top:14px;
+            right:14px;
+
+            display:flex;
+            gap:10px;
+
+            z-index:1000;
+        }
+
+        button{
+
+            padding:10px 14px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:
+                    rgba(0,0,0,0.55);
+
+            color:white;
+
+            font-size:14px;
+
+            cursor:pointer;
+
+            backdrop-filter:blur(5px);
+
+            transition:0.2s;
+        }
+
+        button:hover{
+
+            background:
+                    rgba(255,255,255,0.15);
+        }
+
+        /* ========================= */
+        /* SEARCH */
+        /* ========================= */
+
+        #search{
+
+            position:absolute;
+
+            left:14px;
+            top:14px;
+
+            width:260px;
+
+            padding:12px 14px;
+
+            border:none;
+
+            border-radius:14px;
+
+            background:
+                    rgba(0,0,0,0.55);
+
+            backdrop-filter:blur(6px);
+
+            color:white;
+
+            outline:none;
+
+            z-index:1000;
+
+            font-size:15px;
+        }
+
+        #search::placeholder{
+            color:#bbb;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<input id="search"
+       placeholder="Пошук організму...">
+
+<div class="panel">
+
+    <button onclick="expandAll(root)">
+        Розгорнути
+    </button>
+
+    <button onclick="collapseAll(root)">
+        Згорнути
+    </button>
+
+</div>
+
+<svg></svg>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+
+    /* ====================================================== */
+    /* DATA */
+    /* ====================================================== */
+
+    const data = {
+
+        name:"ЖИТТЯ",
+        color:"#d8b07b",
+
+        children:[
+
+            {
+                name:"Бактерії",
+                color:"#a57a58",
+                children:[
+                    {name:"Ціанобактерії"},
+                    {name:"Спірохети"},
+                    {name:"Протеобактерії"},
+                    {name:"Грампозитивні"}
+                ]
+            },
+            {
+                name:"Еукаріоти",
+                color:"#67a9c4",
+
+                children:[
+
+                    {
+                        name:"Рослини",
+                        color:"#55c86f",
+
+                        children:[
+
+                            {name:"Водорості"},
+                            {name:"Мохи"},
+                            {name:"Папороті"},
+
+                            {
+                                name:"Голонасінні",
+                                children:[
+                                    {name:"Хвойні"},
+                                    {name:"Гінкго"}
+                                ]
+                            },
+
+                            {
+                                name:"Покритонасінні",
+                                children:[
+                                    {name:"Однодольні"},
+                                    {name:"Дводольні"}
+                                ]
+                            }
+
+                        ]
+                    },
+
+                    {
+                        name:"Гриби",
+                        color:"#857569",
+
+                        children:[
+                            {name:"Дріжджі"},
+                            {name:"Пліснява"},
+                            {name:"Шапинкові"}
+                        ]
+                    },
+
+                    {
+                        name:"Тварини",
+                        color:"#a16ec7",
+
+                        children:[
+
+                            {
+                                name:"Безхребетні",
+                                color:"#9d5fd1",
+
+                                children:[
+                                    {name:"Комахи"},
+                                    {name:"Молюски"},
+                                    {name:"Черви"},
+                                    {name:"Павуки"},
+                                    {name:"Ракоподібні"}
+                                ]
+                            },
+
+                            {
+                                name:"Хребетні",
+                                color:"#5faed2",
+
+                                children:[
+
+                                    {
+                                        name:"Риби",
+                                        color:"#57a8e4",
+                                        children:[
+                                            {name:"Хрящові"},
+                                            {name:"Кісткові"},
+                                            {name:"Лопатепері"}
+                                        ]
+                                    },
+
+                                    {
+                                        name:"Амфібії",
+                                        color:"#a5ad58",
+                                        children:[
+                                            {name:"Жаби"},
+                                            {name:"Тритони"},
+                                            {name:"Саламандри"}
+                                        ]
+                                    },
+
+                                    {
+                                        name:"Рептилії",
+                                        color:"#97a351",
+                                        children:[
+                                            {name:"Ящірки"},
+                                            {name:"Змії"},
+                                            {name:"Крокодили"},
+                                            {name:"Динозаври"}
+                                        ]
+                                    },
+
+                                    {
+                                        name:"Птахи",
+                                        color:"#de6f8e",
+                                        children:[
+                                            {name:"Хижі"},
+                                            {name:"Папуги"},
+                                            {name:"Горобцеподібні"}
+                                        ]
+                                    },
+
+                                    {
+                                        name:"Ссавці",
+                                        color:"#e5a14d",
+
+                                        children:[
+
+                                            {name:"Однопрохідні"},
+                                            {name:"Сумчасті"},
+
+                                            {
+                                                name:"Плацентарні",
+
+                                                children:[
+                                                    {name:"Примати"},
+                                                    {name:"Коти"},
+                                                    {name:"Собаки"},
+                                                    {name:"Кити"},
+                                                    {name:"Кажани"},
+                                                    {name:"Гризуни"}
+                                                ]
+                                            }
+
+                                        ]
+                                    }
+
+                                ]
+                            }
+
+                        ]
+                    }
+
+                ]
+            },
+            {
+                name:"Археї",
+                color:"#a08a70",
+                children:[
+                    {name:"Термофіли"},
+                    {name:"Метаногени"},
+                    {name:"Галофіли"}
+                ]
+            },
+
+
+
+        ]
+    };
+
+    /* ====================================================== */
+    /* SVG */
+    /* ====================================================== */
+
+    const width = 7000;
+    const height = 7000;
+
+    const svg = d3.select("svg")
+        .attr("viewBox",[0,0,width,height]);
+
+    const g = svg.append("g");
+
+    const tooltip =
+        document.getElementById("tooltip");
+
+    /* ====================================================== */
+    /* TREE */
+    /* ====================================================== */
+
+    const root = d3.hierarchy(data);
+
+    const tree = d3.tree()
+        .size([width - 300, 2800]);
+
+    /* ====================================================== */
+    /* COLLAPSE */
+    /* ====================================================== */
+
+    function collapse(d){
+
+        if(d.children){
+
+            d._children = d.children;
+
+            d._children.forEach(collapse);
+
+            d.children = null;
+        }
+    }
+
+    root.children.forEach(collapse);
+
+    /* ====================================================== */
+    /* UPDATE */
+    /* ====================================================== */
+
+    function update(){
+
+        tree(root);
+
+        const nodes = root.descendants();
+
+        const links = root.links();
+
+        /* ========================= */
+        /* LINKS */
+        /* ========================= */
+
+        const link = g.selectAll(".link")
+            .data(links,d=>d.target.id||(d.target.id=Math.random()));
+
+        link.enter()
+
+            .append("path")
+
+            .attr("class","link")
+
+            .merge(link)
+
+            .transition()
+
+            .duration(700)
+
+            .attr("stroke",d=>d.target.data.color||"#999")
+
+            .attr("stroke-width",
+
+                d=>Math.max(
+                    1.5,
+                    8 - d.target.depth * 0.7
+                )
+
+            )
+
+            .attr("d",
+
+                d3.linkVertical()
+
+                    .x(d=>d.x)
+
+                    .y(d=>height - d.y * 0.42)
+
+            );
+
+        link.exit().remove();
+
+        /* ========================= */
+        /* NODES */
+        /* ========================= */
+
+        const node = g.selectAll(".node")
+            .data(nodes,d=>d.id||(d.id=Math.random()));
+
+        const enter = node.enter()
+
+            .append("g")
+
+            .attr("class","node")
+
+            .attr("transform",d=>
+
+                `translate(${d.x},${height - d.y * 0.42})`
+
+            )
+
+            .on("click",(event,d)=>{
+
+                if(d.children){
+
+                    d._children = d.children;
+                    d.children = null;
+
+                }else{
+
+                    d.children = d._children;
+                    d._children = null;
+                }
+
+                update();
+            });
+
+        /* ========================= */
+        /* CIRCLES */
+        /* ========================= */
+
+        enter.append("circle")
+
+            .attr("r",d=>
+
+                Math.max(
+                    12,
+                    90 - d.depth * 6.6
+                )
+
+            )
+
+            .attr("fill",d=>{
+
+                if(d._children)
+                    return "#ffb347";
+
+                return d.data.color || "#888";
+            })
+
+            .on("mousemove",(event,d)=>{
+
+                tooltip.style.opacity = 1;
+
+                tooltip.innerHTML = `
+<b>${d.data.name}</b><br>
+Рівень: ${d.depth}
+`;
+
+                tooltip.style.left =
+                    event.pageX + 15 + "px";
+
+                tooltip.style.top =
+                    event.pageY + 15 + "px";
+            })
+
+            .on("mouseout",()=>{
+
+                tooltip.style.opacity = 0;
+            });
+
+        /* ========================= */
+        /* TEXT */
+        /* ========================= */
+
+        enter.append("text")
+
+            .attr("dy","0.35em")
+
+            .style("opacity",d=>
+
+                d.depth > 5 ? 0 : 1
+
+            )
+
+            .text(d=>d.data.name);
+
+        /* ========================= */
+        /* UPDATE */
+        /* ========================= */
+
+        node.merge(enter)
+
+            .transition()
+
+            .duration(700)
+
+            .attr("transform",d=>
+
+                `translate(${d.x},${height - d.y * 0.42})`
+
+            );
+        g.selectAll(".link").lower();
+        g.selectAll(".node").raise();
+
+        node.exit().remove();
+    }
+
+    /* ====================================================== */
+    /* EXPAND */
+    /* ====================================================== */
+
+    function expandAll(d){
+
+        if(d._children){
+
+            d.children = d._children;
+            d._children = null;
+        }
+
+        if(d.children){
+
+            d.children.forEach(expandAll);
+        }
+
+        update();
+    }
+
+    /* ====================================================== */
+    /* COLLAPSE */
+    /* ====================================================== */
+
+    function collapseAll(d){
+
+        if(d.children){
+
+            d._children = d.children;
+
+            d._children.forEach(collapseAll);
+
+            d.children = null;
+        }
+
+        update();
+    }
+
+    /* ====================================================== */
+    /* SEARCH */
+    /* ====================================================== */
+
+    document
+        .getElementById("search")
+
+        .addEventListener("input",(e)=>{
+
+            const value =
+                e.target.value.toLowerCase();
+
+            g.selectAll(".node circle")
+
+                .attr("stroke",d=>{
+
+                    if(
+                        d.data.name
+                            .toLowerCase()
+                            .includes(value)
+                    ){
+                        return "yellow";
+                    }
+
+                    return "white";
+                })
+
+                .attr("stroke-width",d=>{
+
+                    if(
+                        d.data.name
+                            .toLowerCase()
+                            .includes(value)
+                    ){
+                        return 5;
+                    }
+
+                    return 1.5;
+                });
+        });
+
+    /* ====================================================== */
+    /* ZOOM */
+    /* ====================================================== */
+
+    svg.call(
+
+        d3.zoom()
+
+            .scaleExtent([0.08,10])
+
+            .on("zoom",(event)=>{
+
+                g.attr(
+                    "transform",
+                    event.transform
+                );
+
+            })
+    );
+
+    /* ====================================================== */
+    /* START POSITION */
+    /* ====================================================== */
+
+    svg.call(
+
+        d3.zoom().transform,
+
+        d3.zoomIdentity
+            .translate(-3000,-5600)
+            .scale(0.55)
+
+    );
+
+    /* ====================================================== */
+    /* START */
+    /* ====================================================== */
+
+    update();
+
+</script>
+
+</body>
+</html>

@@ -76,4 +76,5 @@ document.addEventListener('DOMContentLoaded', () => {
     parentReverseHideButtons.forEach((button, index) => {
         toggleVisibilityReverse(button, parentUncleAntReverseContainers[index]);
     });
+
 });

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .category {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .subcategory {
+            margin: 20px 0;
+        }
+
+        .item {
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fafafa;
+        }
+
+        .item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .speaker {
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .speaker:hover {
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Household Items</h1>
+
+<!-- General Items -->
+<div class="category">
+    <h2>General Items <span class="speaker" onclick="speak('General Items')">🔊</span></h2>
+
+    <!-- Furniture -->
+    <div class="subcategory">
+        <h3>Furniture <span class="speaker" onclick="speak('Furniture')">🔊</span></h3>
+        <div class="item">
+            <h4>Sofa <span class="speaker" onclick="speak('Sofa')">🔊</span></h4>
+            <img src="https://www.ikea.com/ca/en/images/products/finnala-sofa-gunnared-medium-gray__0514368_pe639441_s5.jpg"
+                 alt="Sofa">
+        </div>
+        <div class="item">
+            <h4>Armchair <span class="speaker" onclick="speak('Armchair')">🔊</span></h4>
+            <img src="https://rentals.inspirefurniture.co.za/wp-content/uploads/2023/01/sextonsinglelounger-blue-2.jpeg"
+                 alt="Armchair">
+        </div>
+        <div class="item">
+            <h4>Table <span class="speaker" onclick="speak('Table')">🔊</span></h4>
+            <img src="https://images.thdstatic.com/productImages/6f42648c-e701-5420-89b0-ba7560d3a5f8/svn/oak-homesullivan-kitchen-dining-tables-40531-60ak-tbl-44_600.jpg"
+                 alt="Table">
+        </div>
+        <div class="item">
+            <h4>Chair <span class="speaker" onclick="speak('Chair')">🔊</span></h4>
+            <img src="https://www.ikea.com/us/en/images/products/nordviken-chair-antique-stain__0832454_pe777681_s5.jpg?f=s"
+                 alt="Chair">
+        </div>
+        <div class="item">
+            <h4>Coffee Table <span class="speaker" onclick="speak('Coffee Table')">🔊</span></h4>
+            <img src="https://eshome.com.ua/13940-thickbox_default/zhurnalnij-stolik-wz.jpg" alt="Coffee Table">
+        </div>
+        <div class="item">
+            <h4>Wardrobe <span class="speaker" onclick="speak('Wardrobe')">🔊</span></h4>
+            <img src="https://i0.wp.com/eloquentdisplays.com/wp-content/uploads/2024/08/stylish-wardrobe-Nigeria.jpg?fit=563%2C598&ssl=1"
+                 alt="Wardrobe">
+        </div>
+        <div class="item">
+            <h4>Dresser <span class="speaker" onclick="speak('Dresser')">🔊</span></h4>
+            <img src="https://d6qwfb5pdou4u.cloudfront.net/product-images/6410001-6420000/6415236/160854680777cbace1824c69a435d4679d94e21a05/1500-1500-frame-0.jpg"
+                 alt="Dresser">
+        </div>
+        <div class="item">
+            <h4>Shelf <span class="speaker" onclick="speak('Shelf')">🔊</span></h4>
+            <img src="https://media.royaldesign.com/2/hubsch-nomad-shelf-double-natural-0?w=800&quality=80" alt="Shelf">
+        </div>
+        <div class="item">
+            <h4>Bed <span class="speaker" onclick="speak('Bed')">🔊</span></h4>
+            <img src="https://i5.walmartimages.com/asr/de37819b-52ed-4978-acdc-1825464a43c7.55f9523da7067f92128987cab4753748.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+                 alt="Bed">
+        </div>
+        <div class="item">
+            <h4>Mattress <span class="speaker" onclick="speak('Mattress')">🔊</span></h4>
+            <img src="https://ushamattress.in/cdn/shop/products/image_png410929474.png?v=1719307988" alt="Mattress">
+        </div>
+        <div class="item">
+            <h4>Desk <span class="speaker" onclick="speak('Desk')">🔊</span></h4>
+            <img src="https://www.officesupplies.org.uk/Images/Product/Default/large/MI003301_1.jpg" alt="Desk">
+        </div>
+    </div>
+    <!-- Lighting -->
+    <div class="item">
+        <h4>Chandelier <span class="speaker" onclick="speak('Chandelier')">🔊</span></h4>
+        <img src="https://www.starrynight.co.in/cdn/shop/products/photo-53_2712579f-1d62-4b80-8555-7c780848a551_1200x.jpg?v=1638768605"
+             alt="Chandelier">
+    </div>
+    <div class="item">
+        <h4>LED Chandelier <span class="speaker" onclick="speak('LED Chandelier')">🔊</span></h4>
+        <img src="https://images.prom.ua/3540814113_w640_h640_3540814113.jpg" alt="LED Chandelier">
+    </div>
+    <div class="subcategory">
+        <h3>Lighting <span class="speaker" onclick="speak('Lighting')">🔊</span></h3>
+        <div class="item">
+            <h4>Lamp <span class="speaker" onclick="speak('Lamp')">🔊</span></h4>
+            <img src="https://global.jaquar.com/images/thumbs/0087150_1-light-table-lamp_960.png" alt="Lamp">
+        </div>
+        <div class="item">
+            <h4>Desk Lamp <span class="speaker" onclick="speak('Desk Lamp')">🔊</span></h4>
+            <img src="https://www.beaconelectrical.co.uk/image_resize/w555/h555/products/3681/L945BK.jpg"
+                 alt="Desk Lamp">
+        </div>
+        <div class="item">
+            <h4>Wall Light <span class="speaker" onclick="speak('Wall Light')">🔊</span></h4>
+            <img src="https://www.proled.com/fileadmin/_processed_/3/f/csm_PROLED_WALL-LIGHT-SILHOUETTE-SQUARE_B04_cd6683bc2c.png"
+                 alt="Wall Light">
+        </div>
+    </div>
+
+    <!-- Decor -->
+    <div class="subcategory">
+        <h3>Decor <span class="speaker" onclick="speak('Decor')">🔊</span></h3>
+        <div class="item">
+            <h4>Carpet <span class="speaker" onclick="speak('Carpet')">🔊</span></h4>
+            <img src="https://www.kashmirbox.com/cdn/shop/products/KBF0033_4.jpg?v=1613368543" alt="Carpet">
+        </div>
+        <div class="item">
+            <h4>Mirror <span class="speaker" onclick="speak('Mirror')">🔊</span></h4>
+            <img src="https://decofurnsa.co.za/cdn/shop/files/decofurn-furniture-orion-round-mirror-546.webp?v=1718733122"
+                 alt="Mirror">
+        </div>
+        <div class="item">
+            <h4>Curtains <span class="speaker" onclick="speak('Curtains')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/61mOVBdOaTL._AC_SL1500_.jpg" alt="Curtains">
+        </div>
+        <div class="item">
+            <h4>Cushion <span class="speaker" onclick="speak('Cushion')">🔊</span></h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAj4u8b8EkSokh4D-GGzTR5BFceGEoKE9gRhvx3lhjT9TiB-xS3dJwPyLcXv9Q2hzOVc&usqp=CAU"
+                 alt="Cushion">
+        </div>
+        <div class="item">
+            <h4>Painting <span class="speaker" onclick="speak('Painting')">🔊</span></h4>
+            <img src="https://cdn.shopify.com/s/files/1/0476/8448/5279/files/starry-night-print-by-van-gogh_1024x1024.webp?v=1708013247"
+                 alt="Painting">
+        </div>
+        <div class="item">
+            <h4>Houseplant <span class="speaker" onclick="speak('Houseplant')">🔊</span></h4>
+            <img src="https://www.gardens4you.ie/media/catalog/product/cache/3a7af0a8e0e317723249dc9098669163/f/d/fd19768-1-wh.jpg"
+                 alt="Houseplant">
+        </div>
+    </div>
+    <!-- Tech -->
+    <div class="subcategory">
+        <h3>Tech <span class="speaker" onclick="speak('Tech')">🔊</span></h3>
+        <div class="item">
+            <h4>Television <span class="speaker" onclick="speak('Television')">🔊</span></h4>
+            <img src="https://trontronics.lk/wp-content/uploads/2024/03/univo-24-inch-television-buy-in-sri-lanka-trontronics-lk-7.jpg"
+                 alt="Television">
+        </div>
+        <div class="item">
+            <h4>Remote Control <span class="speaker" onclick="speak('Remote Control')">🔊</span></h4>
+            <img src="https://www.dcutec.com/4052-large_default/universal-remote-control-for-hisense-lcdled.jpg"
+                 alt="Remote Control">
+        </div>
+        <div class="item">
+            <h4>Air Conditioner <span class="speaker" onclick="speak('Air Conditioner')">🔊</span></h4>
+            <img src="https://www.buyitdirect.ie/Images/iQool18B_1_Supersize.jpg?v=8" alt="Air Conditioner">
+        </div>
+        <div class="item">
+            <h4>Fan <span class="speaker" onclick="speak('Fan')">🔊</span></h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLKThd-V1VuaOVf4ivd3xbZQS7agxl4ZPJw&s"
+                 alt="Fan">
+        </div>
+        <div class="item">
+            <h4>Heater <span class="speaker" onclick="speak('Heater')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/81pslR4Zu4L.jpg" alt="Heater">
+        </div>
+    </div>
+    <!-- Misc -->
+    <div class="subcategory">
+        <h3>Miscellaneous <span class="speaker" onclick="speak('Miscellaneous')">🔊</span></h3>
+        <div class="item">
+            <h4>Clock <span class="speaker" onclick="speak('Clock')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/61vcNMGfF+L._AC_UF894,1000_QL80_.jpg" alt="Clock">
+        </div>
+        <div class="item">
+            <h4>Book <span class="speaker" onclick="speak('Book')">🔊</span></h4>
+            <img src="https://pngimg.com/d/book_PNG2114.png" alt="Book">
+        </div>
+        <div class="item">
+            <h4>Trash Bin <span class="speaker" onclick="speak('Trash Bin')">🔊</span></h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEC7OkeFqLJopHf9tyKAsP-qLrxMyA2jts4w&s"
+                 alt="Trash Bin">
+        </div>
+        <div class="item">
+            <h4>Organizer <span class="speaker" onclick="speak('Organizer')">🔊</span></h4>
+            <img src="https://cdn.connox.com/m/100030/289339/media/umbra/Mrz-2021/1016977-910-1.jpg" alt="Organizer">
+        </div>
+        <div class="item">
+            <h4>Board Games <span class="speaker" onclick="speak('Board Games')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/81ymbGmdHiL.jpg" alt="Board Games">
+        </div>
+    </div>
+</div>
+<!-- Kitchen Items -->
+<div class="category">
+    <h2>Kitchen Items <span class="speaker" onclick="speak('Kitchen Items')">🔊</span></h2>
+
+    <!-- Appliances -->
+    <div class="subcategory">
+        <h3>Appliances <span class="speaker" onclick="speak('Appliances')">🔊</span></h3>
+        <div class="item">
+            <h4>Fridge <span class="speaker" onclick="speak('Fridge')">🔊</span></h4>
+            <img src="https://www.showspace.co.za/wp-content/uploads/2021/05/bosch-serie-6-fridge-521-litre-no-frost-bottom-freezer-combination-doors-inox-easy-clean-200x200.webp"
+                 alt="Fridge">
+        </div>
+        <div class="item">
+            <h4>Microwave <span class="speaker" onclick="speak('Microwave')">🔊</span></h4>
+            <img src="https://assets.products-live.ao.com/Images/0f37122c-95bd-4649-9af9-dbfbe674422f/1280x1280/Samsung_MC28H5013AS_SI_1.jpg"
+                 alt="Microwave">
+        </div>
+        <div class="item">
+            <h4>Oven <span class="speaker" onclick="speak('Oven')">🔊</span></h4>
+            <img src="https://appliance-source.co.uk/content/images/thumbs/0012547_neff-b3ccc0an0b-built-in-single-oven.jpeg"
+                 alt="Oven">
+        </div>
+        <div class="item">
+            <h4>Dishwasher <span class="speaker" onclick="speak('Dishwasher')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/611sneDPQ5L.jpg" alt="Dishwasher">
+        </div>
+        <div class="item">
+            <h4>Stove <span class="speaker" onclick="speak('Stove')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/71CuqWukldL._AC_UF894,1000_QL80_.jpg" alt="Stove">
+        </div>
+        <div class="item">
+            <h4>Kettle <span class="speaker" onclick="speak('Kettle')">🔊</span></h4>
+            <img src="https://shop.tefal.ua/media/mf_webp/jpg/pub/media/catalog/product/e/l/elektrochajnik-tefal-glass-kettle-ki605830-2.webp?auto=webp&format=pjpg&width=548&height=504&fit=cover"
+                 alt="Kettle">
+        </div>
+        <div class="item">
+            <h4>Toaster <span class="speaker" onclick="speak('Toaster')">🔊</span></h4>
+            <img src="https://hamiltonbeach.com/media/pdphero/22997F-hero.jpg" alt="Toaster">
+        </div>
+        <div class="item">
+            <h4>Blender <span class="speaker" onclick="speak('Blender')">🔊</span></h4>
+            <img src="https://newellbrands.imgix.net/c33949cf-7678-3d4b-8d1b-03e0d50d1635/c33949cf-7678-3d4b-8d1b-03e0d50d1635.jpg"
+                 alt="Blender">
+        </div>
+        <div class="item">
+            <h4>Coffee Maker <span class="speaker" onclick="speak('Coffee Maker')">🔊</span></h4>
+            <img src="https://i5.walmartimages.com/asr/2d507cb2-eb80-4b9f-8375-f7f42d27bb76.e0fb2c169fbc602b7c24e32a2d950350.jpeg"
+                 alt="Coffee Maker">
+        </div>
+    </div>
+
+    <!-- Tableware -->
+    <div class="subcategory">
+        <h3>Tableware <span class="speaker" onclick="speak('Tableware')">🔊</span></h3>
+        <div class="item">
+            <h4>Plate <span class="speaker" onclick="speak('Plate')">🔊</span></h4>
+            <img src="https://milakitchen.com/cdn/shop/products/side_plate_2fff9a9d-b41e-4a05-a95d-261a63a7db42.jpg?v=1579792777"
+                 alt="Plate">
+        </div>
+        <div class="item">
+            <h4>Bowl <span class="speaker" onclick="speak('Bowl')">🔊</span></h4>
+            <img src="https://img2.activant-inet.com/custom/487532/Image/gF245223001.jpg" alt="Bowl">
+        </div>
+        <div class="item">
+            <h4>Cup <span class="speaker" onclick="speak('Cup')">🔊</span></h4>
+            <img src="https://coffeecups.co.uk/cdn/shop/products/porcelite-cappuccino-cup-16oz455ml-325937.jpg?v=1697023770"
+                 alt="Cup">
+        </div>
+        <div class="item">
+            <h4>Mug <span class="speaker" onclick="speak('Mug')">🔊</span></h4>
+            <img src="https://jenggala.com/wp-content/uploads/2019/01/A02HC0034-1159.jpg" alt="Mug">
+        </div>
+        <div class="item">
+            <h4>Glass <span class="speaker" onclick="speak('Glass')">🔊</span></h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRX-ulpVndRdq-a1bemrpRtLWKuk9BgpMsw&s"
+                 alt="Glass">
+        </div>
+        <div class="item">
+            <h4>Cutlery <span class="speaker" onclick="speak('Cutlery')">🔊</span></h4>
+            <img src="https://www.cutlery.uk.com/wp-content/uploads/2023/03/Elia-Siena-Stainless-Steel-Cutlery-4-Piece-Set.jpg"
+                 alt="Cutlery">
+        </div>
+        <div class="item">
+            <h4>Pot <span class="speaker" onclick="speak('Pot')">🔊</span></h4>
+            <img src="https://www.ikea.com/us/en/images/products/annons-pot-with-lid-glass-stainless-steel__0714768_pe730240_s5.jpg?f=s"
+                 alt="Pot">
+        </div>
+        <div class="item">
+            <h4>Pan <span class="speaker" onclick="speak('Pan')">🔊</span></h4>
+            <img src="https://cdn.shopify.com/s/files/1/0045/7093/9481/products/UKFRYINGPAN11RVT01.jpg?v=1658146754"
+                 alt="Pan">
+        </div>
+        <div class="item">
+            <h4>Cutting Board <span class="speaker" onclick="speak('Cutting Board')">🔊</span></h4>
+            <img src="https://coleandmasonusa.com/cdn/shop/files/cole-mason-cutting-boards-cole-mason-barkway-acacia-wooden-chopping-board-with-handle-40344955781440.jpg?v=1701737495"
+                 alt="Cutting Board">
+        </div>
+    </div>
+
+    <!-- Utensils -->
+    <div class="subcategory">
+        <h3>Utensils <span class="speaker" onclick="speak('Utensils')">🔊</span></h3>
+        <div class="item">
+            <h4>Ladle <span class="speaker" onclick="speak('Ladle')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/61PskdgESGL.jpg" alt="Ladle">
+        </div>
+        <div class="item">
+            <h4>Spatula <span class="speaker" onclick="speak('Spatula')">🔊</span></h4>
+            <img src="https://media-production.procook.io/f6f9b4ead9c3bb0a7d525cd430a61102.jpg" alt="Spatula">
+        </div>
+        <div class="item">
+            <h4>Grater <span class="speaker" onclick="speak('Grater')">🔊</span></h4>
+            <img src="https://www.ikea.com/sa/en/images/products/idealisk-grater-stainless-steel__0713134_pe729282_s5.jpg?f=xs"
+                 alt="Grater">
+        </div>
+        <div class="item">
+            <h4>Knife <span class="speaker" onclick="speak('Knife')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/51A7jub2akL.jpg" alt="Knife">
+        </div>
+        <div class="item">
+            <h4>Spoon <span class="speaker" onclick="speak('Spoon')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/514nTHwlFnL.jpg" alt="Spoon">
+        </div>
+        <div class="item">
+            <h4>Fork <span class="speaker" onclick="speak('Fork')">🔊</span></h4>
+            <img src="https://jenggala.com/wp-content/uploads/2020/05/CT0343-2001-1.jpg" alt="Fork">
+        </div>
+        <div class="item">
+            <h4>Can Opener <span class="speaker" onclick="speak('Can Opener')">🔊</span></h4>
+            <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2022/3/26/f12ff523-1cc5-4f43-934b-10e1f2e18a6e.jpg"
+                 alt="Can Opener">
+        </div>
+        <div class="item">
+            <h4>Strainer <span class="speaker" onclick="speak('Strainer')">🔊</span></h4>
+            <img src="https://www.ikea.com/bh/en/images/products/idealisk-strainer-stainless-steel__0713138_pe729278_s5.jpg?f=s"
+                 alt="Strainer">
+        </div>
+        <div class="item">
+            <h4>Measuring Cup <span class="speaker" onclick="speak('Measuring Cup')">🔊</span></h4>
+            <img src="https://giftsandgadgets.ab.ca/cdn/shop/products/image-upload-s--kq8hm7dr---y0mhspuqkji1bcq8gltw_2000x.jpg?v=1649695817"
+                 alt="Measuring Cup">
+        </div>
+        <div class="item">
+            <h4>Dish Rack <span class="speaker" onclick="speak('Dish Rack')">🔊</span></h4>
+            <img src="https://reborn.homes/cdn/shop/files/Artboard2_2x-100_fe693b1f-901c-4df1-9577-91c0c408929e.jpg?v=1708377580&width=1080"
+                 alt="Dish Rack">
+        </div>
+    </div>
+
+    <h1>Bathroom Items</h1>
+
+    <!-- Bathroom Equipment -->
+    <div class="category">
+        <h2>Equipment <span class="speaker" onclick="speak('Equipment')">🔊</span></h2>
+        <div class="item">
+            <h4>Toilet <span class="speaker" onclick="speak('Toilet')">🔊</span></h4>
+            <img src="https://craftandmain.com/wp-content/uploads/2020/03/TL-8423HC-EW-FM-Toilet-Angle-scaled.jpg"
+                 alt="Toilet">
+        </div>
+        <div class="item">
+            <h4>Sink <span class="speaker" onclick="speak('Sink')">🔊</span></h4>
+            <img src="https://lixil.cdn.celum.cloud/63807_9024001EC020_2_CDNwebp.webp" alt="Sink">
+        </div>
+        <div class="item">
+            <h4>Shower <span class="speaker" onclick="speak('Shower')">🔊</span></h4>
+            <img src="https://www.theshowerheadstore.com/cdn/shop/files/Main_Image_All_Metal_3-Spray_Hand_Held_Shower_Head_with_Hose_Set_Brushed_Nickel_2.5_2_1100x.jpg?v=1726313506"
+                 alt="Shower">
+        </div>
+        <div class="item">
+            <h4>Bathtub <span class="speaker" onclick="speak('Bathtub')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/31KaXPbjg6L.jpg" alt="Bathtub">
+        </div>
+    </div>
+    <!-- Hygiene Products -->
+    <div class="category">
+        <h2>Hygiene Products <span class="speaker" onclick="speak('Hygiene Products')">🔊</span></h2>
+        <div class="item">
+            <h4>Soap <span class="speaker" onclick="speak('Soap')">🔊</span></h4>
+            <img src="https://5.imimg.com/data5/LW/GN/MY-4990337/bath-soap-500x500.jpg" alt="Soap">
+        </div>
+        <div class="item">
+            <h4>Shampoo <span class="speaker" onclick="speak('Shampoo')">🔊</span></h4>
+            <img src="https://images.ctfassets.net/w7pbeqztoxtb/2rHPP93BI5zRm3XwDPbWwz/69946ccbcb0d31cb6571e9cda4b2f880/Herbal_Essences_Rose_Hips_Smooth_Shampoo__13.5_fl_oz.jpg?fm=webp&q=80"
+                 alt="Shampoo">
+        </div>
+        <div class="item">
+            <h4>Hair Conditioner <span class="speaker" onclick="speak('Hair Conditioner')">🔊</span></h4>
+            <img src="https://nutritive.com.ua/cdn/shop/files/fif8l7f2kxmdlqfqemghfg44xsnmzvrh.jpg?v=1722927572&width=533"
+                 alt="Hair Conditioner">
+        </div>
+        <div class="item">
+            <h4>Toothpaste <span class="speaker" onclick="speak('Toothpaste')">🔊</span></h4>
+            <img src="https://images.ethicalsuperstore.com/images/26481-green-people-peppermint-toothpaste-update-1.webp"
+                 alt="Toothpaste">
+        </div>
+        <div class="item">
+            <h4>Toothbrush <span class="speaker" onclick="speak('Toothbrush')">🔊</span></h4>
+            <img src="https://madebyradius.com/cdn/shop/products/Totz-blue-unpackaged-angeld-dropshadow-web.jpg?v=1633103383"
+                 alt="Toothbrush">
+        </div>
+        <div class="item">
+            <h4>Razor <span class="speaker" onclick="speak('Razor')">🔊</span></h4>
+            <img src="https://www.truefittandhill.com/cdn/shop/products/Faux-Opal-Blue-M3-Razor-Chrome-Wellington-t-shape-back2_2048x.png?v=1712181498"
+                 alt="Razor">
+        </div>
+        <div class="item">
+            <h4>Liquid Soap <span class="speaker" onclick="speak('Liquid Soap')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/71hAk-HnuVL.jpg" alt="Liquid Soap">
+        </div>
+        <div class="item">
+            <h4>Towel <span class="speaker" onclick="speak('Towel')">🔊</span></h4>
+            <img src="https://luxcras.com/cdn/shop/products/FB-HSS0003-11.jpg?v=1633672384&width=1946" alt="Towel">
+        </div>
+    </div>
+    <!-- Bathroom Accessories -->
+    <div class="category">
+        <h2>Accessories <span class="speaker" onclick="speak('Accessories')">🔊</span></h2>
+        <div class="item">
+            <h4>Mirror <span class="speaker" onclick="speak('Mirror')">🔊</span></h4>
+            <img src="https://enarat.com/wp-content/uploads/2022/09/KTBM-MR-13W-CR.jpg" alt="Mirror">
+        </div>
+        <div class="item">
+            <h4>Towel Rack <span class="speaker" onclick="speak('Towel Rack')">🔊</span></h4>
+            <img src="https://www.arova.com.au/cdn/shop/files/clio-heated-towel-rail-round-brushed-nickel-accessories-arova-678191.jpg?v=1698630253&width=1667" alt="Towel Rack">
+        </div>
+        <div class="item">
+            <h4>Shower Curtain <span class="speaker" onclick="speak('Shower Curtain')">🔊</span></h4>
+            <img src="https://m.media-amazon.com/images/I/71okTjOKkwL._AC_UF350,350_QL80_.jpg" alt="Shower Curtain">
+        </div>
+        <div class="item">
+            <h4>Bath Mat <span class="speaker" onclick="speak('Bath Mat')">🔊</span></h4>
+            <img src="https://media-uk.landmarkshops.in/cdn-cgi/image/h=750,w=750,q=85,fit=cover/homecentre/1000010916364-1000010916363_01-2100.jpg" alt="Bath Mat">
+        </div>
+        <div class="item">
+            <h4>Laundry Basket <span class="speaker" onclick="speak('Laundry Basket')">🔊</span></h4>
+            <img src="https://target.scene7.com/is/image/Target/GUEST_49b96811-da38-4ea8-9b2a-5cd998610a91?wid=488&hei=488&fmt=pjpeg" alt="Laundry Basket">
+        </div>
+    </div>
+    <!-- Bathroom Appliances -->
+    <div class="category">
+        <h2>Appliances <span class="speaker" onclick="speak('Appliances')">🔊</span></h2>
+        <div class="item">
+            <h4>Hair Dryer <span class="speaker" onclick="speak('Hair Dryer')">🔊</span></h4>
+            <img src="https://uk.remington-europe.com/media/catalog/product/d/3/d3010_1.jpg?quality=80&fit=bounds&height=594&width=594&canvas=594:594" alt="Hair Dryer">
+        </div>
+        <div class="item">
+            <h4>Curling Iron / Hair Straightener <span class="speaker"
+                                                       onclick="speak('Curling Iron or Hair Straightener')">🔊</span>
+            </h4>
+            <img src="https://i5.walmartimages.com/seo/Revlon-Perfect-Heat-1-1-4-Triple-Ceramic-Curling-Iron-Black_fed48018-502c-48fd-bd86-aaa1022da2fc.b4db903b5614dcd39286f73c25c02ada.jpeg" alt="Curling Iron or Hair Straightener">
+        </div>
+        <div class="item">
+            <h4>Bathroom Scales <span class="speaker" onclick="speak('Bathroom Scales')">🔊</span></h4>
+            <img src="https://www.tfa-dostmann.de/wp-content/uploads/19570-600f24c8d72da.jpg" alt="Bathroom Scales">
+        </div>
+    </div>
+</div>
+<script>
+    function speak(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+    }
+</script>
+</body>
+</html>

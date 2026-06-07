@@ -8,9 +8,9 @@ const plusButton = document.getElementById('plus-button'); // кнопка +
 const minusButton = document.getElementById('minus-button'); // кнопка -
 const operationDivs = document.getElementsByClassName('operation'); // 2 div із класом operation
 
-let operation = '+'; // змінна для операторів ('+' по дефауту)
+let operation = '+'; // змінна для операторів ('+' по дефолту)
 
-const validateNumber = function(event) { // пітвердити номер: (перевірка на число)?
+const validateNumber = function(event) { // підтвердити номер: (перевірка на число)?
     event.target.style.border = ''; // скидаєм стиль рамки елемента на якому виникла подія
     let number = event.target.value; // значення поля input
     if (number === '') { // якщо значення поля input порожнє то:

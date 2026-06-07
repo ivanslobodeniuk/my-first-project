@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .category {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            color: #444;
+        }
+        .item {
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 200px;
+        }
+        .item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .speaker {
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .speaker:hover {
+            text-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Food Categories</h1>
+
+<div class="category">
+    <h2>Main Dishes <span class="speaker" onclick="speak('Main Dishes')">🔊</span></h2>
+    <div class="item"><h3>Pasta <span class="speaker" onclick="speak('Pasta')">🔊</span></h3>
+        <img src="https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg" alt="Pasta">
+    </div>
+    <div class="item"><h3>Rice <span class="speaker" onclick="speak('Rice')">🔊</span></h3>
+        <img src="https://b2958125.smushcdn.com/2958125/wp-content/uploads/street-style-chicken-rice-recipe-1-3.jpg?lossy=1&strip=1&webp=1" alt="Rice">
+    </div>
+    <div class="item"><h3>Mashed Potato <span class="speaker" onclick="speak('Mashed Potato')">🔊</span></h3>
+        <img src="https://petersfoodadventures.com/wp-content/uploads/2017/06/garlic-mashed-potatoes-.png" alt="Mashed Potato">
+    </div>
+    <div class="item"><h3>Pizza <span class="speaker" onclick="speak('Pizza')">🔊</span></h3>
+        <img src="https://www.killingthyme.net/wp-content/uploads/2021/03/herb-and-garlic-cheese-pizza-5-500x500.jpg" alt="Pizza">
+    </div>
+    <div class="item"><h3>Sushi <span class="speaker" onclick="speak('Sushi')">🔊</span></h3>
+        <img src="https://int.japanesetaste.com/cdn/shop/articles/how-to-make-makizushi-sushi-rolls-japanese-taste.jpg?v=1707914944&width=600" alt="Sushi">
+    </div>
+    <div class="item"><h3>Burger <span class="speaker" onclick="speak('Burger')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpSkKP8LgqK1IPs87-PyJcveeRF0Wet-xgyw&s" alt="Burger">
+    </div>
+    <div class="item"><h3>Salad <span class="speaker" onclick="speak('Salad')">🔊</span></h3>
+        <img src="https://www.eatingwell.com/thmb/CcLY-9Ru3OWpd5k_V-hoxlk4whg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chopped-power-salad-with-chicken-hero-1x1-0178-475bbf1bbd884d5d97fc236b8975dff2.jpg" alt="Salad">
+    </div>
+    <div class="item"><h3>Soup <span class="speaker" onclick="speak('Soup')">🔊</span></h3>
+        <img src="https://static.toiimg.com/thumb/54477744.cms?imgsize=138088&width=800&height=800" alt="Soup">
+    </div>
+    <div class="item"><h3>Borsch <span class="speaker" onclick="speak('Borsch')">🔊</span></h3>
+        <img src="https://www.lavenderandmacarons.com/wp-content/uploads/2018/10/authentic-vegan-borscht.jpg" alt="Borsch">
+    </div>
+    <div class="item"><h3>Lasagna <span class="speaker" onclick="speak('Lasagna')">🔊</span></h3>
+        <img src="https://assets.bonappetit.com/photos/656f48d75b552734225041ba/1:1/w_3129,h_3129,c_limit/20231120-WEB-Lasanga-6422.jpg" alt="Lasagna">
+    </div>
+    <div class="item"><h3>Toast <span class="speaker" onclick="speak('Toast')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLGuRpjDe8ks4WSCaZMVa8sHtbs7wKQ5Q4_A&s" alt="Toast">
+    </div>
+    <div class="item"><h3>French Fries <span class="speaker" onclick="speak('French Fries')">🔊</span></h3>
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/07/French-fries-a084f8f.jpg?quality=90&resize=556,505" alt="French Fries">
+    </div>
+    <div class="item"><h3>Dumplings <span class="speaker" onclick="speak('Dumplings')">🔊</span></h3>
+        <img src="https://cdn.momsdish.com/wp-content/uploads/2021/08/DSC_2700-500x500.jpg" alt="Dumplings">
+    </div>
+    <div class="item"><h3>Omelette <span class="speaker" onclick="speak('Omelette')">🔊</span></h3>
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2024/06/egg-oats-omelette.jpg" alt="Omelette">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Meat and Fish <span class="speaker" onclick="speak('Meat and Fish')">🔊</span></h2>
+    <div class="item"><h3>Chicken <span class="speaker" onclick="speak('Chicken')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjL78FLV0ZaztbAyQERDUq9NjKJ7ab2Mflg&s" alt="Chicken">
+    </div>
+    <div class="item"><h3>Beef <span class="speaker" onclick="speak('Beef')">🔊</span></h3>
+        <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/327DBA15-0C31-4CC6-ABCA-2FCE38AF66CD/Derivates/edb1c351-ed50-4560-a2d1-bf3e0be1a04d.jpg" alt="Beef">
+    </div>
+    <div class="item"><h3>Pork <span class="speaker" onclick="speak('Pork')">🔊</span></h3>
+        <img src="https://assets.epicurious.com/photos/578d209c1edb4f17303e3f11/1:1/w_2560%2Cc_limit/six-hour-pork-roast.jpg" alt="Pork">
+    </div>
+    <div class="item"><h3>Bacon <span class="speaker" onclick="speak('Bacon')">🔊</span></h3>
+        <img src="https://thehomeintent.com/wp-content/uploads/2024/02/How-to-Make-Bacon-Healthy-No-Nitrate-Recipe-featured-720x720.jpg" alt="Bacon">
+    </div>
+    <div class="item"><h3>Turkey <span class="speaker" onclick="speak('Turkey')">🔊</span></h3>
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Next-level-roast-turkey-da8a8a5.jpg" alt="Turkey">
+    </div>
+    <div class="item"><h3>Veal <span class="speaker" onclick="speak('Veal')">🔊</span></h3>
+        <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/66EAA8B3-514B-412D-9FDC-61B1B66A4CDF/Derivates/E1DA7D5E-D121-40DC-A80B-83DF7D04988E.jpg" alt="Veal">
+    </div>
+    <div class="item"><h3>Shrimp <span class="speaker" onclick="speak('Shrimp')">🔊</span></h3>
+        <img src="https://www.kitchenskip.com/wp-content/uploads/2022/05/how-to-reheat-shrimp-f.jpg" alt="Shrimp">
+    </div>
+    <div class="item"><h3>Salmon <span class="speaker" onclick="speak('Salmon')">🔊</span></h3>
+        <img src="https://www.mariberico.cl/web/wp-content/uploads/2023/11/salmon-porcion.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Tuna <span class="speaker" onclick="speak('Tuna')">🔊</span></h3>
+        <img src="https://www.thetinnedfishmarket.com/cdn/shop/files/angelachu-bonito-tuna-laminado.jpg?v=1691134795&width=480" alt="Tuna">
+    </div>
+    <div class="item"><h3>Sardines <span class="speaker" onclick="speak('Sardines')">🔊</span></h3>
+        <img src="https://www.thetinnedfishmarket.com/cdn/shop/files/Real-Conservera-Sardinillas.jpg?v=1723399600&width=480" alt="Sardines">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Dairy Products <span class="speaker" onclick="speak('Dairy Products')">🔊</span></h2>
+    <div class="item"><h3>Milk <span class="speaker" onclick="speak('Milk')">🔊</span></h3>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/health-benefits-of-goat-milk-1586900792.jpg?crop=0.668xw:1.00xh;0.259xw,0&resize=640:*" alt="Milk">
+    </div>
+    <div class="item"><h3>Yogurt <span class="speaker" onclick="speak('Yogurt')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO3P8rYfI0F_I9TM-ZSbieIsF6s0zVWcGSew&s" alt="Yogurt">
+    </div>
+    <div class="item"><h3>Butter <span class="speaker" onclick="speak('Butter')">🔊</span></h3>
+        <img src="https://www.brockleystores.co.uk/wp-content/uploads/unsalted-butter.jpg" alt="Butter">
+    </div>
+    <div class="item"><h3>Sour Cream <span class="speaker" onclick="speak('Sour Cream')">🔊</span></h3>
+        <img src="https://www.spatuladesserts.com/wp-content/uploads/2023/03/sour-cream-substitute-1-500x500.jpg" alt="Sour Cream">
+    </div>
+    <div class="item"><h3>Cottage Cheese <span class="speaker" onclick="speak('Cottage Cheese')">🔊</span></h3>
+        <img src="https://cheesemaking.com/cdn/shop/products/cottage-cheese-recipe-dry-curd.jpg?crop=center&height=1200&v=1533180777&width=1200" alt="Cottage cheese">
+    </div>
+    <div class="item"><h3>Mozzarella <span class="speaker" onclick="speak('Mozzarella')">🔊</span></h3>
+        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-158594980/no_brand_fresh_suluguni_cheese_-_fresh_mozzarella_cheese_-_keju_mozzarella_full01_b70xj1m9.jpg" alt="Mozzarella">
+    </div>
+    <div class="item"><h3>Hard Cheese <span class="speaker" onclick="speak('Hard Cheese')">🔊</span></h3>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/wedge-of-gruyere-cheese-on-board-with-knife-close-royalty-free-image-1659713695.jpg?crop=0.669xw:1.00xh;0,0&resize=980:*" alt="Hard Cheese">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Desserts <span class="speaker" onclick="speak('Desserts')">🔊</span></h2>
+    <div class="item"><h3>Chocolate <span class="speaker" onclick="speak('Chocolate')">🔊</span></h3>
+        <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/04/12/fn_healthy-chocolate-getty_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1649787692492.jpeg" alt="Chocolate">
+    </div>
+    <div class="item"><h3>Ice Cream <span class="speaker" onclick="speak('Ice Cream')">🔊</span></h3>
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg" alt="Ice Cream">
+    </div>
+    <div class="item"><h3>Cake <span class="speaker" onclick="speak('Cake')">🔊</span></h3>
+        <img src="https://flouringkitchen.com/wp-content/uploads/2023/07/BW1A4089-2.jpg" alt="Cake">
+    </div>
+    <div class="item"><h3>Cookies <span class="speaker" onclick="speak('Cookies')">🔊</span></h3>
+        <img src="https://www.marcellinaincucina.com/wp-content/uploads/2023/08/italian-butter-cookies-featured.jpg" alt="Cookies">
+    </div>
+    <div class="item"><h3>Pastries <span class="speaker" onclick="speak('Pastries')">🔊</span></h3>
+        <img src="https://waringsbakery.co.uk/wp-content/uploads/2021/03/warings%E2%80%93_0016_Pastry-brunch-box-plain-3.jpg" alt="Pastries">
+    </div>
+    <div class="item"><h3>Pudding <span class="speaker" onclick="speak('Pudding')">🔊</span></h3>
+        <img src="https://theclevermeal.com/wp-content/uploads/2018/11/chocolate-pudding-recipe-1.jpg" alt="Pudding">
+    </div>
+    <div class="item"><h3>Muffins <span class="speaker" onclick="speak('Muffins')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-HVuracEvP5iGSPPnsF69NRv32glS3eYWbQ&s" alt="Muffins">
+    </div>
+    <div class="item"><h3>Donut <span class="speaker" onclick="speak('Donut')">🔊</span></h3>
+        <img src="https://doughnutworldadelaide.com.au/cdn/shop/files/Doughnut-World-Adelaide-Homer-Doughnut.jpg?v=1725624074" alt="Donut">
+    </div>
+    <div class="item"><h3>Cheesecake <span class="speaker" onclick="speak('Cheesecake')">🔊</span></h3>
+        <img src="https://images.squarespace-cdn.com/content/v1/5bc319cfa09a7e06a471700a/ece5b263-f80f-4a15-aa94-d406471fc302/no+bake+cheesecake+hero.jpg" alt="Cheesecake">
+    </div>
+    <div class="item"><h3>Macarons <span class="speaker" onclick="speak('Macarons')">🔊</span></h3>
+        <img src="https://coffretsprestige.com/media/catalog/product/cache/fd4498db4dcf4e65dde7a6e55252b984/3/4/3428-3773-n.png" alt="Macarons">
+    </div>
+    <div class="item"><h3>Waffles <span class="speaker" onclick="speak('Waffles')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaAl4jTQDaJYqPN8kJUQSq0gJo-cIc8iGXdtM8MWQsXHTBt5Sr17jb4P7wI7n_2FwNz4s&usqp=CAU" alt="Waffles">
+    </div>
+    <div class="item"><h3>Marshmallow <span class="speaker" onclick="speak('Marshmallow')">🔊</span></h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbhvoyB7955mwSYsJFnZa1s_-zXR5K0VzKulp2u4YW-Jb4LaHYKE63XyyIxEsXCHBxL5Q&usqp=CAU" alt="Marshmallow">
+    </div>
+    <div class="item"><h3>Panna Cotta <span class="speaker" onclick="speak('Panna Cotta')">🔊</span></h3>
+        <img src="https://www.vjeudjeu.be/wp-content/uploads/2021/04/rood-fruit-panna-cotta-uitgelicht.jpg.webp" alt="Panna Cotta">
+    </div>
+    <div class="item"><h3>Jam <span class="speaker" onclick="speak('Jam')">🔊</span></h3>
+        <img src="https://www.pamperedchef.ca/iceberg/com/recipe/1565610-1-lg.jpg" alt="Jam">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Drinks <span class="speaker" onclick="speak('Drinks')">🔊</span></h2>
+    <div class="item"><h3>Coffee <span class="speaker" onclick="speak('Coffee')">🔊</span></h3>
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=w_1110,c_fill" alt="Salmon">
+    </div>
+    <div class="item"><h3>Tea <span class="speaker" onclick="speak('Tea')">🔊</span></h3>
+        <img src="https://sakiproducts.com/cdn/shop/articles/black-tea-min_800x800.jpg?v=1667387066" alt="Salmon">
+    </div>
+    <div class="item"><h3>Cocoa <span class="speaker" onclick="speak('Cocoa')">🔊</span></h3>
+        <img src="https://nibbedcacao.com/cdn/shop/articles/pour_hot_cacao_pink_cup_1200x.png?v=1678370372" alt="Salmon">
+    </div>
+    <div class="item"><h3>Juice <span class="speaker" onclick="speak('Juice')">🔊</span></h3>
+        <img src="https://play-lh.googleusercontent.com/9edIQw3IulBae6kreGNlm59hG4kloEGXE5bEfuoxcPGlI47Jz-ZJpl1dwO5Zn5U9UFM" alt="Salmon">
+    </div>
+    <div class="item"><h3>Water <span class="speaker" onclick="speak('Water')">🔊</span></h3>
+        <img src="https://images.ctfassets.net/x1vbd41hpla5/3hcdLiQMI1PvsSQnan6Jxx/b530726aaee79ec91523bfd99d6cae88/offset_comp_138167_2x.jpg?fm=webp" alt="Salmon">
+    </div>
+    <div class="item"><h3>Lemonade <span class="speaker" onclick="speak('Lemonade')">🔊</span></h3>
+        <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/713FF3F9-C3C9-4213-96D6-403FAD1E94C2/Derivates/33352ab5-d113-41a0-ab33-2e3d8467a145.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Smoothie <span class="speaker" onclick="speak('Smoothie')">🔊</span></h3>
+        <img src="https://alittleinsanity.com/wp-content/uploads/2012/03/Natural-Breakfast-Smoothie-Recipe-Gluten-Free-Vegan-1024x683.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Soda <span class="speaker" onclick="speak('Soda')">🔊</span></h3>
+        <img src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/7048c39a-fbc7-4554-8f8a-7b03efd5de25._SL480_.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Cocktail <span class="speaker" onclick="speak('Cocktail')">🔊</span></h3>
+        <img src="https://www.californiastrawberries.com/wp-content/uploads/2021/06/Red-White-and-Blue-Frozen-Cocktail-5.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Milkshake <span class="speaker" onclick="speak('Milkshake')">🔊</span></h3>
+        <img src="https://fooddoodles.com/wp-content/uploads/2023/07/mocha-milkshake-image-1200.jpg" alt="Salmon">
+    </div>
+    <div class="item"><h3>Compote <span class="speaker" onclick="speak('Compote')">🔊</span></h3>
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/05/strawberry-compote.jpg" alt="Salmon">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Breads and Baked Goods <span class="speaker" onclick="speak('Breads and Baked Goods')">🔊</span></h2>
+    <div class="item"><h3>Bread <span class="speaker" onclick="speak('Bread')">🔊</span></h3>
+        <img src="https://theloopywhisk.com/wp-content/uploads/2020/04/Gluten-Free-Bread_730px-featured.jpg" alt="Bread">
+    </div>
+    <div class="item"><h3>Baguette <span class="speaker" onclick="speak('Baguette')">🔊</span></h3>
+        <img src="https://threemillsbakery.com.au/wp-content/uploads/2021/12/Baguette_House_1-1239x1302.jpeg" alt="Baguette">
+    </div>
+    <div class="item"><h3>Buns <span class="speaker" onclick="speak('Buns')">🔊</span></h3>
+        <img src="https://www.seasonsandsuppers.ca/wp-content/uploads/2019/05/burger-buns-1200-500x500.jpg" alt="Buns">
+    </div>
+    <div class="item"><h3>Croissant <span class="speaker" onclick="speak('Croissant')">🔊</span></h3>
+        <img src="https://fazerpro.fazer.com/globalassets/fb_voicroissant_60x90g_720x720_web.png" alt="Croissant">
+    </div>
+    <div class="item"><h3>Ciabatta <span class="speaker" onclick="speak('Ciabatta')">🔊</span></h3>
+        <img src="https://emilyfabulous.com/wp-content/uploads/2021/04/homemade-ciabatta-rolls-cut-in-half-1-500x500.jpg" alt="Ciabatta">
+    </div>
+    <div class="item"><h3>Focaccia <span class="speaker" onclick="speak('Focaccia')">🔊</span></h3>
+        <img src="https://kristineskitchenblog.com/wp-content/uploads/2023/08/focaccia-12-2.jpg" alt="Focaccia">
+    </div>
+    <div class="item"><h3>Bagel <span class="speaker" onclick="speak('Bagel')">🔊</span></h3>
+        <img src="https://i.imgur.com/HVb7SL5.jpg" alt="Bagel">
+    </div>
+    <div class="item"><h3>Lavash <span class="speaker" onclick="speak('Lavash')">🔊</span></h3>
+        <img src="https://vidarbergum.com/wp-content/uploads/2023/08/armenian-lavash-wrap-bread-4-1024x1024.jpg" alt="Lavash">
+    </div>
+    <div class="item"><h3>Tart <span class="speaker" onclick="speak('Tart')">🔊</span></h3>
+        <img src="https://richanddelish.com/wp-content/uploads/2023/05/Mini-Tart-Shells-1-1.jpg" alt="Tart">
+    </div>
+</div>
+
+<div class="category">
+    <h2>Spices and Sauces <span class="speaker" onclick="speak('Spices and Sauces')">🔊</span></h2>
+    <div class="item"><h3>Salt <span class="speaker" onclick="speak('Salt')">🔊</span></h3>
+        <img src="https://www.sprouts.com/wp-content/uploads/2017/11/Salt-1.jpg" alt="Salt">
+    </div>
+    <div class="item"><h3>Pepper <span class="speaker" onclick="speak('Pepper')">🔊</span></h3>
+        <img src="https://spices.com/cdn/shop/products/a5ba8da4bc526b25463e0607481bc4e39a3d5cd33806617f1f32d76e54c84f9d.jpg?v=1718827884&width=1445" alt="Pepper">
+    </div>
+    <div class="item"><h3>Olive Oil <span class="speaker" onclick="speak('Olive Oil')">🔊</span></h3>
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/TK/JH/IE/2821926/olive-oil-bp-250x250.png" alt="Olive Oil">
+    </div>
+    <div class="item"><h3>Soy Sauce <span class="speaker" onclick="speak('Soy Sauce')">🔊</span></h3>
+        <img src="https://m.media-amazon.com/images/I/71bH17unU7L._AC_UF350,350_QL80_.jpg" alt="Soy Sauce">
+    </div>
+    <div class="item"><h3>Mayonnaise <span class="speaker" onclick="speak('Mayonnaise')">🔊</span></h3>
+        <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/0519d358-63a9-4e8e-8cac-39b7ef956f92/Derivates/e55aca10-5a15-445d-a983-b0ce6ec36888.jpg" alt="Mayonnaise">
+    </div>
+    <div class="item"><h3>Ketchup <span class="speaker" onclick="speak('Ketchup')">🔊</span></h3>
+        <img src="https://cdn.casapraticaqualita.com.br/wp-content/uploads/sites/2/2021/11/Ketchup-caseiro-prepare-o-molho-com-cenoura-beterraba-e-outros-ingredientes.jpg" alt="Ketchup">
+    </div>
+    <div class="item"><h3>Mustard <span class="speaker" onclick="speak('Mustard')">🔊</span></h3>
+        <img src="https://rayesmustard.com/cdn/shop/files/AROOSTOOK-GOLD_Food-Shot.jpg?v=1711509340" alt="Mustard">
+    </div>
+    <div class="item"><h3>Basil <span class="speaker" onclick="speak('Basil')">🔊</span></h3>
+        <img src="https://i.etsystatic.com/32467083/r/il/1e6383/5652636209/il_570xN.5652636209_80p0.jpg" alt="Basil">
+    </div>
+    <div class="item"><h3>Chili <span class="speaker" onclick="speak('Chili')">🔊</span></h3>
+        <img src="https://m.media-amazon.com/images/I/7106NJUvV2L._AC_UF1000,1000_QL80_.jpg" alt="Chili">
+    </div>
+    <div class="item"><h3>Cinnamon <span class="speaker" onclick="speak('Cinnamon')">🔊</span></h3>
+        <img src="https://static.independent.co.uk/2024/09/17/18/newFile-1.jpg?width=1200&height=1200&fit=crop" alt="Cinnamon">
+    </div>
+    <div class="item"><h3>Caraway <span class="speaker" onclick="speak('Caraway')">🔊</span></h3>
+        <img src="https://images.prom.ua/2714990174_kmin-tmin.jpg" alt="Caraway">
+    </div>
+    <div class="item"><h3>Ginger <span class="speaker" onclick="speak('Ginger')">🔊</span></h3>
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/5/419045536/IL/PE/GD/184025675/ginger-spice-whole1-800x800-500x500.jpg" alt="Ginger">
+    </div>
+</div>
+
+<script>
+    function speak(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+    }
+</script>
+
+</body>
+</html>

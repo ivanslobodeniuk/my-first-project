@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма для паспорта</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select {
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .passport {
+      border: 1px solid #000;
+      width: 600px;
+      height: 400px;
+      padding: 20px;
+      position: relative;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Passport_of_the_Citizen_of_Ukraine_%28Since_2016%29.jpg') no-repeat center center;
+      background-size: 100% 100%; /* Зображення розтягується за шириною та висотою */
+      box-sizing: border-box; /* Коректно враховує padding і border */
+    }
+    .passport img {
+      position: absolute;
+      top: 94px;
+      left: 33px;
+      width: 200px;
+      height: 274px;
+      object-fit: cover;
+      border: 1px solid #000;
+    }
+    .passport-details-box {
+      display: flex;
+    }
+    .passport-details-left {
+      font-size: 9px;
+      margin-top: 50px;
+      margin-left: 240px;
+    }
+    .passport-details-right {
+      font-size: 9px;
+      margin-top: 203px;
+      margin-left: 21px
+    }
+  </style>
+</head>
+<body>
+<h1>Заповнення даних для паспорта</h1>
+<form id="passportForm">
+  <label for="surname">Прізвище</label>
+  <input type="text" id="surname" name="surname" required>
+
+  <label for="name">Ім'я</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="patronymic">По батькові</label>
+  <input type="text" id="patronymic" name="patronymic" required>
+
+  <label for="sex">Стать</label>
+  <select id="sex" name="sex" required>
+    <option value="Ж/F">Ж/F</option>
+    <option value="Ч/M">Ч/M</option>
+  </select>
+
+  <label for="dob">Дата народження</label>
+  <input type="date" id="dob" name="dob" required>
+
+  <label for="expiry">Дійсний до</label>
+  <input type="date" id="expiry" name="expiry" required>
+
+  <label for="country">Країна</label>
+  <input type="text" id="country" name="country" value="Україна/UKR" readonly>
+
+  <label for="recordNo">Запис №</label>
+  <input type="number" id="recordNo" name="recordNo" min="" max="" required>
+
+  <label for="docNo">Документ №</label>
+  <input type="number" id="docNo" name="docNo" min="" max="" required>
+
+  <label for="photo">Завантажити фото</label>
+  <input type="file" id="photo" name="photo" accept="image/*" required>
+
+  <button type="submit">Створити паспорт</button>
+</form>
+
+<div class="passport" id="passportDisplay">
+  <img id="passportPhoto" src="" alt="Фото">
+  <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1200px-Flag_of_Ukraine.svg.png" alt="Прапор">
+  <div class="passport-details-box">
+    <div class="passport-details-left">
+      <p><strong>Прізвище / Surname:</strong> <span id="dispSurname"></span></p>
+      <p><strong>Ім'я / Name:</strong> <span id="dispName"></span></p>
+      <p><strong>По батькові / Patronymic:</strong> <span id="dispPatronymic"></span></p>
+      <p><strong>Стать / Sex:</strong> <span id="dispSex"></span></p>
+      <p><strong>Дата народження / Date of birth:</strong> <span id="dispDob"></span></p>
+      <p><strong>Дійсний до / Date of expiry:</strong> <span id="dispExpiry"></span></p>
+    </div>
+    <div class="passport-details-right">
+      <p><strong>Громадянство / Nationality:</strong> <span id="dispCountry">Україна/UKR</span></p>
+      <p><strong>Запис № / Record No.:</strong> <span id="dispRecordNo"></span></p>
+      <p><strong>Документ № / Document No.:</strong> <span id="dispDocNo"></span></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('passportForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    document.getElementById('dispSurname').textContent = document.getElementById('surname').value;
+    document.getElementById('dispName').textContent = document.getElementById('name').value;
+    document.getElementById('dispPatronymic').textContent = document.getElementById('patronymic').value;
+    document.getElementById('dispSex').textContent = document.getElementById('sex').value;
+    document.getElementById('dispDob').textContent = document.getElementById('dob').value;
+    document.getElementById('dispExpiry').textContent = document.getElementById('expiry').value;
+    document.getElementById('dispRecordNo').textContent = document.getElementById('recordNo').value;
+    document.getElementById('dispDocNo').textContent = document.getElementById('docNo').value;
+
+    const file = document.getElementById('photo').files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('passportPhoto').src = e.target.result;
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+</body>
+</html>

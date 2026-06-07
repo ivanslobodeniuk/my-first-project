@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .category {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      color: #333;
+    }
+    .domestic {
+      background-color: #ffcccb;
+    }
+    .wild {
+      background-color: #c8e6c9;
+    }
+    .item {
+      margin: 10px;
+      padding: 10px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      width: 200px;
+    }
+    .item img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .speaker {
+      cursor: pointer;
+      margin-left: 8px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .speaker:hover {
+      text-shadow: 0 0 10px rgba(0, 150, 136, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Animals</h1>
+
+<div class="category domestic">
+  <h2>Domestic Animals <span class="speaker" onclick="speak('Domestic Animals')">🔊</span></h2>
+
+  <!-- Domestic animal items -->
+  <div class="item">
+    <h3>Cat <span class="speaker" onclick="speak('Cat')">🔊</span></h3>
+    <img src="https://zoobonus.ua/storage/breeds/images/big/TGIlJog1nDVOxqLnwfx4YtBBIT4zlVkNMKqHsWL2.jpg" alt="Cat">
+  </div>
+  <div class="item">
+    <h3>Dog <span class="speaker" onclick="speak('Dog')">🔊</span></h3>
+    <img src="https://petzpark.com.au/cdn/shop/articles/Breeds_Thumbnails_4_1_800x.jpg" alt="Dog">
+  </div>
+  <div class="item">
+    <h3>Horse <span class="speaker" onclick="speak('Horse')">🔊</span></h3>
+    <img src="https://img.freepik.com/premium-photo/brown-horse-running-field-sunny-day_812426-434734.jpg?w=360" alt="Horse">
+  </div>
+  <div class="item">
+    <h3>Cow <span class="speaker" onclick="speak('Cow')">🔊</span></h3>
+    <img src="https://agrotorg.net/imgs/board/40/562140-1s.jpg" alt="Cow">
+  </div>
+  <div class="item">
+    <h3>Donkey <span class="speaker" onclick="speak('Donkey')">🔊</span></h3>
+    <img src="https://tributeequinenutrition.com/cdn/shop/articles/tribute-how-to-feed-donkeys-article.jpg?v=1666338424" alt="Donkey">
+  </div>
+  <div class="item">
+    <h3>Goat <span class="speaker" onclick="speak('Goat')">🔊</span></h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg" alt="Goat">
+  </div>
+  <div class="item">
+    <h3>Sheep <span class="speaker" onclick="speak('Sheep')">🔊</span></h3>
+    <img src="https://www.savacaf.com/cdn/shop/articles/How_to_Get_Started_With_Backyard_Sheep_500x500_002.jpg?v=1657742526" alt="Sheep">
+  </div>
+  <div class="item">
+    <h3>Pig <span class="speaker" onclick="speak('Pig')">🔊</span></h3>
+    <img src="https://dc36f83db647f610a033.b-cdn.net/wp-content/uploads/2018/04/pig.jpg" alt="Pig">
+  </div>
+  <div class="item">
+    <h3>Rabbit <span class="speaker" onclick="speak('Rabbit')">🔊</span></h3>
+    <img src="https://i.pinimg.com/736x/b8/25/e1/b825e1484a21bb183466a3890df21c39.jpg" alt="Rabbit">
+  </div>
+  <div class="item">
+    <h3>Chicken <span class="speaker" onclick="speak('Chicken')">🔊</span></h3>
+    <img src="https://www.pipinchicksilkies.com/app/uploads/2024/04/BlackTail-1.jpg" alt="Chicken">
+  </div>
+  <div class="item">
+    <h3>Duck <span class="speaker" onclick="speak('Duck')">🔊</span></h3>
+    <img src="https://media.australian.museum/media/dd/images/mallard.ef584b7.width-800.8b55bd7.jpg" alt="Duck">
+  </div>
+  <div class="item">
+    <h3>Turkey <span class="speaker" onclick="speak('Turkey')">🔊</span></h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Male_wild_turkey_%28Meleagris_gallopavo%29_strutting.jpg/800px-Male_wild_turkey_%28Meleagris_gallopavo%29_strutting.jpg" alt="Turkey">
+  </div>
+  <div class="item">
+    <h3>Goose <span class="speaker" onclick="speak('Goose')">🔊</span></h3>
+    <img src="https://images.squarespace-cdn.com/content/v1/5de2a8445511bf790e31e6e2/1580844610885-ZPJDA32YK6N8YD2VDR7G/image-asset.jpeg" alt="Goose">
+  </div>
+</div>
+
+<div class="category wild">
+  <h2>Wild Animals <span class="speaker" onclick="speak('Wild Animals')">🔊</span></h2>
+
+  <!-- Wild animal items -->
+  <div class="item">
+    <h3>Lion <span class="speaker" onclick="speak('Lion')">🔊</span></h3>
+    <img src="https://img.haarets.co.il/bs/0000018c-1ada-d4e4-a1df-3edfd2500000/0f/9d/fa70a9144dcc95a91e4319e4db18/54605103.JPG?precrop=2248,2248,x648,y0" alt="Lion">
+  </div>
+  <div class="item">
+    <h3>Tiger <span class="speaker" onclick="speak('Tiger')">🔊</span></h3>
+    <img src="https://wwfgifts-files.worldwildlife.org/wwfgifts/images/tiger-large-photo.jpg" alt="Tiger">
+  </div>
+  <div class="item">
+    <h3>Elephant <span class="speaker" onclick="speak('Elephant')">🔊</span></h3>
+    <img src="https://www.worldanimalprotection.ca/cdn-cgi/image/width=1280,format=auto/siteassets/shutterstock_2118427715_cropped.jpg" alt="Elephant">
+  </div>
+  <div class="item">
+    <h3>Wolf <span class="speaker" onclick="speak('Wolf')">🔊</span></h3>
+    <img src="https://wwfeu.awsassets.panda.org/img/w01049_dsc2169_20090911_8100a_wolf__c__ralph_frank_wwf_546040.jpg" alt="Wolf">
+  </div>
+  <div class="item">
+    <h3>Giraffe <span class="speaker" onclick="speak('Giraffe')">🔊</span></h3>
+    <img src="https://animalfactguide.com/wp-content/uploads/2020/12/giraffe3.jpg" alt="Giraffe">
+  </div>
+  <div class="item">
+    <h3>Bear <span class="speaker" onclick="speak('Bear')">🔊</span></h3>
+    <img src="https://marvel-b1-cdn.bc0a.com/f00000000299671/www.columbuszoo.org/sites/default/files/styles/square_large/public/assets/animals/bear-banner.jpg?h=e271913f&itok=cN8AxTCk" alt="Bear">
+  </div>
+  <div class="item">
+    <h3>Fox <span class="speaker" onclick="speak('Fox')">🔊</span></h3>
+    <img src="https://www.nps.gov/articles/images/red-fox_Ed-Sharron-copy.jpg?maxwidth=650&autorotate=false" alt="Fox">
+  </div>
+  <div class="item">
+    <h3>Panda <span class="speaker" onclick="speak('Panda')">🔊</span></h3>
+    <img src="https://sdzwildlifeexplorers.org/sites/default/files/2017-07/panda-face.jpg" alt="Panda">
+  </div>
+  <div class="item">
+    <h3>Kangaroo <span class="speaker" onclick="speak('Kangaroo')">🔊</span></h3>
+    <img src="https://media.australian.museum/media/dd/images/red_kangaroo.d517513.width-1200.fffb47b.jpg" alt="Kangaroo">
+  </div>
+  <div class="item">
+    <h3>Monkey <span class="speaker" onclick="speak('Monkey')">🔊</span></h3>
+    <img src="https://wwfgifts-files.worldwildlife.org/wwfgifts/images/capuchin-monkey-large-photo.jpg" alt="Monkey">
+  </div>
+  <div class="item">
+    <h3>Raccoon <span class="speaker" onclick="speak('Raccoon')">🔊</span></h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Raccoon_in_Central_Park_%2835264%29.jpg/1200px-Raccoon_in_Central_Park_%2835264%29.jpg" alt="Raccoon">
+  </div>
+  <div class="item">
+    <h3>Squirrel <span class="speaker" onclick="speak('Squirrel')">🔊</span></h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg" alt="Squirrel">
+  </div>
+  <div class="item">
+    <h3>Hare <span class="speaker" onclick="speak('Hare')">🔊</span></h3>
+    <img src="https://a-z-animals.com/media/hare-1.jpg" alt="Hare">
+  </div>
+</div>
+<script>
+  function speak(text) {
+    let utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+  }
+</script>
+
+</body>
+</html>
